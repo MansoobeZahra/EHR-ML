@@ -1,0 +1,18 @@
+# Credentialed PhysioNet data (MIMIC-IV, eICU) and anything derived from it at patient level must never be committed.
+mimic-iv-3.1/
+eicu-collaborative-research-database-2.0/
+**/cache/
+**/data_matrix_*.csv
+*.pkl
+*.parquet
+*.npy
+*.npz
+# Environment and build artifacts
+.venv/
+__pycache__/
+**/catboost_info/
+*.bak
+# Private notes and confidential reviews
+REVIEWS.md
+CLAUDE.md
+handoff/reference/

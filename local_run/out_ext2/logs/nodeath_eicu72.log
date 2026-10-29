@@ -1,0 +1,26 @@
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_ext2
+✅ EHR-ML helpers defined!
+[runner2 14:20:48] patient-grouped outer folds: 12677 rows, 10835 patients
+[runner2 14:20:49] nodeath eicu72: excluding 1230 of 12677 episodes (43.4% of deaths)
+[runner2 14:20:49] patient-grouped outer folds: 11447 rows, 9742 patients
+  fold 1/15 done (57s)
+  fold 2/15 done (106s)
+  fold 3/15 done (126s)
+  fold 4/15 done (145s)
+  fold 5/15 done (162s)
+  fold 6/15 done (181s)
+  fold 7/15 done (197s)
+  fold 8/15 done (212s)
+  fold 9/15 done (227s)
+  fold 10/15 done (246s)
+  fold 11/15 done (263s)
+  fold 12/15 done (279s)
+  fold 13/15 done (299s)
+  fold 14/15 done (316s)
+  fold 15/15 done (335s)

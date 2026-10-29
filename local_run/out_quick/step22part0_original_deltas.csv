@@ -1,0 +1,7 @@
+task,method,roster,delta_AUROC_vs_XGB_single,CI95_low,CI95_high,p_corrected_t,n_scores
+MIMIC-IV 24h-window in-hospital mortality,LR single (all features),original,-0.001599093477578406,-0.013455388694441557,0.010257201739284743,0.7270631085092867,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, XGB meta (library defaults)",original,-0.02999994994438131,-0.057384653412400136,-0.0026152464763624823,0.038342240624046564,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, XGB meta (fixed config)",original,-0.0014899764002925808,-0.008270042455622007,0.0052900896550368455,0.5747273062344336,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, LR meta",original,0.005504691842064235,-0.009108626728800785,0.020118010412929255,0.35466099347935964,5
+MIMIC-IV 24h-window in-hospital mortality,Mean of Level-1,original,0.002679029039312186,-0.008210649283983133,0.013568707362607506,0.5320866873734307,5
+MIMIC-IV 24h-window in-hospital mortality,Best single Level-1 (picked in-fold),original,-0.07080131878353005,-0.09263957193677118,-0.04896306563028892,0.0008433097702293946,5

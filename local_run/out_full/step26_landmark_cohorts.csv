@@ -1,0 +1,3 @@
+task,n,prevalence
+MIMIC LOS>7 (landmark 2d),1470,0.319047619047619
+MIMIC LOS>14 (landmark 2d),1470,0.11564625850340136

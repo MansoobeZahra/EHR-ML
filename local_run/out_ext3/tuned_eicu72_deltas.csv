@@ -1,0 +1,25 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72 h mortality,original+tuned,XGB single (fixed config),XGB single (tuned),auc,-0.002940161528296503,-0.005820655030449108,-5.9668026143897945e-05,0.04602069075112003,15
+eICU 72 h mortality,original+tuned,XGB single (fixed config),XGB single (tuned),auprc,-0.004108483174468503,-0.007274056959837802,-0.0009429093890992034,0.014644161372310283,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (library defaults)",XGB single (tuned),auc,-0.029453394656044293,-0.03708080756093489,-0.021825981751153693,9.127072537751246e-07,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (library defaults)",XGB single (tuned),auprc,-0.034831298889106486,-0.04813352768023472,-0.021529070097978255,6.362982298235842e-05,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (tuned)",XGB single (tuned),auc,-0.008710676638593389,-0.013816203302384877,-0.0036051499748019017,0.0025770296602414255,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (tuned)",XGB single (tuned),auprc,-0.009107294575324146,-0.015850051474439405,-0.0023645376762088883,0.01171320128829234,15
+eICU 72 h mortality,original+tuned,"Stack, LR meta (tuned C)",XGB single (tuned),auc,-0.007277873174010489,-0.011147219370074013,-0.003408526977946965,0.001230882448143289,15
+eICU 72 h mortality,original+tuned,"Stack, LR meta (tuned C)",XGB single (tuned),auprc,-0.008844142435020401,-0.017104467675684666,-0.000583817194356134,0.037607879890042994,15
+eICU 72 h mortality,original+tuned,Mean of Level-1,XGB single (tuned),auc,-0.024564357749821197,-0.030718601981215277,-0.018410113518427116,6.169718651527489e-07,15
+eICU 72 h mortality,original+tuned,Mean of Level-1,XGB single (tuned),auprc,-0.044290984317229345,-0.055327644122071806,-0.033254324512386885,5.785381946843415e-07,15
+eICU 72 h mortality,original+tuned,Best single Level-1 (picked in-fold),XGB single (tuned),auc,-0.06969919101766935,-0.08016048389499876,-0.05923789814033993,9.651930366061379e-10,15
+eICU 72 h mortality,original+tuned,Best single Level-1 (picked in-fold),XGB single (tuned),auprc,-0.16869572419071274,-0.1895354201814366,-0.1478560281999889,7.248712741159125e-11,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.02651323312774779,-0.03360140625698423,-0.019425059998511345,1.3252896748916498e-06,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.03072281571463798,-0.04579737793107196,-0.015648253498204,0.000639314669069746,15
+eICU 72 h mortality,original+tuned,XGB single (tuned),XGB single (fixed config),auc,0.002940161528296503,5.9668026143897945e-05,0.005820655030449108,0.04602069075112003,15
+eICU 72 h mortality,original+tuned,XGB single (tuned),XGB single (fixed config),auprc,0.004108483174468503,0.0009429093890992034,0.007274056959837802,0.014644161372310283,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (tuned)",XGB single (fixed config),auc,-0.005770515110296885,-0.010747952266099235,-0.000793077954494536,0.0261379470311931,15
+eICU 72 h mortality,original+tuned,"Stack, XGB meta (tuned)",XGB single (fixed config),auprc,-0.004998811400855644,-0.01381374983969122,0.0038161270379799307,0.24398994969648857,15
+eICU 72 h mortality,original+tuned,"Stack, LR meta (tuned C)",XGB single (fixed config),auc,-0.004337711645713986,-0.008409720188981661,-0.00026570310244631093,0.038446126427750915,15
+eICU 72 h mortality,original+tuned,"Stack, LR meta (tuned C)",XGB single (fixed config),auprc,-0.004735659260551898,-0.014350835348049328,0.004879516826945531,0.3086974080290259,15
+eICU 72 h mortality,original+tuned,Mean of Level-1,XGB single (fixed config),auc,-0.021624196221524693,-0.027398061242106066,-0.01585033120094332,1.3060494539196554e-06,15
+eICU 72 h mortality,original+tuned,Mean of Level-1,XGB single (fixed config),auprc,-0.04018250114276085,-0.052998732932041354,-0.02736626935348034,9.711543235813025e-06,15
+eICU 72 h mortality,original+tuned,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.06675902948937283,-0.07806334727096081,-0.05545471170778485,4.660275942924841e-09,15
+eICU 72 h mortality,original+tuned,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.16458724101624425,-0.1869898117463991,-0.14218467028608942,2.647930763544082e-10,15

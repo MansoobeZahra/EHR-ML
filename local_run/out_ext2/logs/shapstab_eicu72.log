@@ -1,0 +1,49 @@
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_ext2
+✅ EHR-ML helpers defined!
+[runner2 14:27:49] patient-grouped outer folds: 12677 rows, 10835 patients
+  fold 1/10 done
+  fold 2/10 done
+  fold 3/10 done
+  fold 4/10 done
+  fold 5/10 done
+  fold 6/10 done
+  fold 7/10 done
+  fold 8/10 done
+  fold 9/10 done
+  fold 10/10 done
+
+Top-20 SHAP set stability across 10 training folds: mean Jaccard = 0.848 (min 0.739)
+Selection frequency (share of folds with the feature in the top set):
+vitals_Heart Rate_avg           1.0
+vitals_SpO2_avg                 1.0
+vitals_Heart Rate_max           1.0
+vitals_SpO2_min                 1.0
+vitals_Heart Rate_last          1.0
+vitals_SpO2_last                1.0
+vitals_Respiratory Rate_last    1.0
+labs_Hemoglobin_avg             1.0
+labs_Glucose_last               1.0
+labs_Potassium_last             1.0
+labs_WBC_last                   1.0
+labs_Creatinine_last            1.0
+labs_Platelets_min              1.0
+labs_Glucose_min                1.0
+labs_BUN_last                   1.0
+labs_Platelets_last             1.0
+labs_Hemoglobin_min             1.0
+vitals_Heart Rate_min           0.9
+labs_Creatinine_first           0.6
+vitals_Respiratory Rate_avg     0.3
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.8392               0.853       -0.0138   -0.0193    -0.0083         0.0003
+    20 0.8503               0.853       -0.0027   -0.0042    -0.0012         0.0025
+    30 0.8520               0.853       -0.0010   -0.0023     0.0003         0.1189
+    40 0.8520               0.853       -0.0010   -0.0027     0.0007         0.2192

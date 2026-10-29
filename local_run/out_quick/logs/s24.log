@@ -1,0 +1,50 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+
+======================================================================
+STEP 24: feature-coverage distribution and sweep
+
+Coverage distribution, eICU 72h (n features = 85)
+[0.0, 0.5)    20
+[0.5, 0.6)     0
+[0.6, 0.7)     5
+[0.7, 0.8)     5
+[0.8, 0.9)     0
+[0.9, 1.0)    55
+<cell 14>:89: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+Coverage distribution, MIMIC-IV 24h (n features = 170)
+[0.0, 0.5)     15
+[0.5, 0.6)      0
+[0.6, 0.7)      0
+[0.7, 0.8)     35
+[0.8, 0.9)     15
+[0.9, 1.0)    105
+<cell 14>:89: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+     dataset  threshold  n_features  AUROC  delta_vs_ref  CI95_low  CI95_high  p_corrected_t
+MIMIC-IV 24h        0.5         155 0.8387        0.0051   -0.0102     0.0203         0.4072
+MIMIC-IV 24h        0.6         155 0.8387        0.0051   -0.0102     0.0203         0.4072
+MIMIC-IV 24h        0.7         155 0.8387        0.0051   -0.0102     0.0203         0.4072
+MIMIC-IV 24h        0.8         120 0.8336        0.0000    0.0000     0.0000            NaN
+MIMIC-IV 24h        0.9         105 0.8267       -0.0069   -0.0269     0.0130         0.3895
+ dataset  threshold  n_features  AUROC  delta_vs_ref  CI95_low  CI95_high  p_corrected_t
+eICU 72h        0.5          65 0.8599        0.0066   -0.0003     0.0135         0.0558
+eICU 72h        0.6          65 0.8599        0.0066   -0.0003     0.0135         0.0558
+eICU 72h        0.7          60 0.8556        0.0024    0.0007     0.0041         0.0183
+eICU 72h        0.8          55 0.8532        0.0000    0.0000     0.0000            NaN
+eICU 72h        0.9          55 0.8532        0.0000    0.0000     0.0000            NaN

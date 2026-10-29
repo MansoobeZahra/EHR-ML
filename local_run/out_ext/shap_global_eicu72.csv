@@ -1,0 +1,56 @@
+feature,feature_std,mean_abs_shap
+vitals_Heart Rate_last,vitals_heart_rate_last,0.30571565
+labs_WBC_last,labs_wbc_last,0.24871112
+vitals_SpO2_min,vitals_spo2_min,0.2224926
+labs_BUN_last,labs_bun_last,0.21125159
+vitals_SpO2_last,vitals_spo2_last,0.1733793
+labs_Potassium_last,labs_potassium_last,0.1577667
+labs_Platelets_last,labs_platelets_last,0.1536235
+vitals_Respiratory Rate_last,vitals_resp_rate_last,0.12626652
+labs_Creatinine_last,labs_creatinine_last,0.10959755
+vitals_Heart Rate_avg,vitals_heart_rate_avg,0.10459398
+labs_Platelets_min,labs_platelets_min,0.094447725
+labs_Hemoglobin_avg,labs_hemoglobin_avg,0.08875829
+labs_Hemoglobin_min,labs_hemoglobin_min,0.08857191
+vitals_Heart Rate_max,vitals_heart_rate_max,0.08261016
+labs_Glucose_last,labs_glucose_last,0.07057354
+vitals_SpO2_avg,vitals_spo2_avg,0.057498794
+labs_Glucose_min,labs_glucose_min,0.05653648
+labs_BUN_avg,labs_bun_avg,0.049156085
+vitals_Heart Rate_min,vitals_heart_rate_min,0.042438842
+labs_Creatinine_first,labs_creatinine_first,0.03171062
+vitals_Respiratory Rate_min,vitals_resp_rate_min,0.030656016
+vitals_Respiratory Rate_avg,vitals_resp_rate_avg,0.025601087
+vitals_Respiratory Rate_max,vitals_resp_rate_max,0.0225229
+labs_Hemoglobin_last,labs_hemoglobin_last,0.021552168
+labs_Glucose_max,labs_glucose_max,0.021231316
+labs_Sodium_max,labs_sodium_max,0.018848218
+labs_Platelets_max,labs_platelets_max,0.018736325
+labs_WBC_first,labs_wbc_first,0.016253054
+vitals_Heart Rate_first,vitals_heart_rate_first,0.015584012
+labs_Sodium_avg,labs_sodium_avg,0.01476473
+labs_BUN_min,labs_bun_min,0.014285815
+labs_Sodium_last,labs_sodium_last,0.013806865
+labs_Platelets_first,labs_platelets_first,0.012826469
+labs_WBC_min,labs_wbc_min,0.010772114
+labs_Sodium_min,labs_sodium_min,0.0104659535
+labs_Glucose_avg,labs_glucose_avg,0.009204684
+labs_Potassium_max,labs_potassium_max,0.006711996
+labs_Glucose_first,labs_glucose_first,0.0063305823
+labs_Platelets_avg,labs_platelets_avg,0.0053541823
+labs_Potassium_avg,labs_potassium_avg,0.005201163
+labs_Potassium_first,labs_potassium_first,0.0048657833
+labs_WBC_max,labs_wbc_max,0.0046905503
+labs_WBC_avg,labs_wbc_avg,0.0044652564
+labs_Creatinine_min,labs_creatinine_min,0.0044605024
+labs_Sodium_first,labs_sodium_first,0.004397611
+labs_Hemoglobin_max,labs_hemoglobin_max,0.003688277
+labs_Creatinine_max,labs_creatinine_max,0.0034588368
+labs_Creatinine_avg,labs_creatinine_avg,0.003387982
+labs_Hemoglobin_first,labs_hemoglobin_first,0.0033783773
+labs_BUN_first,labs_bun_first,0.0029371912
+vitals_SpO2_first,vitals_spo2_first,0.0023557632
+labs_Potassium_min,labs_potassium_min,0.001591395
+vitals_Respiratory Rate_first,vitals_resp_rate_first,0.001080733
+vitals_SpO2_max,vitals_spo2_max,0.0
+labs_BUN_max,labs_bun_max,0.0

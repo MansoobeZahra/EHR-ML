@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72 h mortality,diverse,LR single (all features),XGB single (fixed config),auc,-0.021453983684235827,-0.029894706508117902,-0.013013260860353754,8.533836562718555e-05,15
+eICU 72 h mortality,diverse,LR single (all features),XGB single (fixed config),auprc,-0.023566893790046877,-0.03553347080140369,-0.011600316778690063,0.0008500868625918034,15
+eICU 72 h mortality,diverse,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.020024092713584667,-0.028159327316770837,-0.011888858110398498,0.00011649222814646976,15
+eICU 72 h mortality,diverse,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.024170871889429464,-0.03700402594309193,-0.011337717835767003,0.0012176906007643762,15
+eICU 72 h mortality,diverse,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-7.849203444874794e-05,-0.005729721530208119,0.005572737461310623,0.9766552467476561,15
+eICU 72 h mortality,diverse,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,0.0026563506689559757,-0.006971163777869903,0.012283865115781854,0.5634372182796792,15
+eICU 72 h mortality,diverse,"Stack, LR meta",XGB single (fixed config),auc,0.0018073410218124215,-0.0034359321265045274,0.00705061417012937,0.47193859015326867,15
+eICU 72 h mortality,diverse,"Stack, LR meta",XGB single (fixed config),auprc,0.001312237183671668,-0.008707261976527068,0.011331736343870406,0.7828963607048971,15
+eICU 72 h mortality,diverse,Mean of Level-1,XGB single (fixed config),auc,-0.024307812720059958,-0.030753058677723835,-0.01786256676239608,1.203826937468122e-06,15
+eICU 72 h mortality,diverse,Mean of Level-1,XGB single (fixed config),auprc,-0.04665340497286015,-0.05992498912493411,-0.03338182082078619,2.711501613683609e-06,15
+eICU 72 h mortality,diverse,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.05903167312218542,-0.06843050626311353,-0.04963283998125731,2.092287676447313e-09,15
+eICU 72 h mortality,diverse,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.15475275883722794,-0.17779585155788535,-0.13170966611657053,8.692206954208359e-10,15

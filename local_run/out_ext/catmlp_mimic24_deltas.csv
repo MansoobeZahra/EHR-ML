@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+MIMIC-IV 24 h mortality,cat_for_mlp,LR single (all features),XGB single (fixed config),auc,-0.004639268369887432,-0.017011393015463776,0.007732856275688912,0.4346993491410065,15
+MIMIC-IV 24 h mortality,cat_for_mlp,LR single (all features),XGB single (fixed config),auprc,-0.012449052490859222,-0.032024721900852766,0.007126616919134321,0.19410630819480135,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.03261213242269522,-0.046303216499865296,-0.018921048345525146,0.00015907315011887135,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.0506003361535823,-0.0728163522775166,-0.028384320029648007,0.00024091986826957346,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.0027913142833277354,-0.011243158005156633,0.005660529438501162,0.49036118455305644,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.009928864145191844,-0.021214811627033252,0.0013570833366495661,0.08008738069659338,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, LR meta",XGB single (fixed config),auc,0.0017487204658893937,-0.0057965659633058405,0.009294006895084628,0.6268456213792661,15
+MIMIC-IV 24 h mortality,cat_for_mlp,"Stack, LR meta",XGB single (fixed config),auprc,-0.00044139143651171774,-0.0077874436025938045,0.006904660729570369,0.899293065551972,15
+MIMIC-IV 24 h mortality,cat_for_mlp,Mean of Level-1,XGB single (fixed config),auc,0.0021069887528311665,-0.003784046485390185,0.007998023991052518,0.45576177478909363,15
+MIMIC-IV 24 h mortality,cat_for_mlp,Mean of Level-1,XGB single (fixed config),auprc,-0.011496427779544804,-0.023757906447522896,0.0007650508884332868,0.06399498206621557,15
+MIMIC-IV 24 h mortality,cat_for_mlp,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.04876574574693459,-0.06859846706845313,-0.028933024425416048,0.00011765665477492249,15
+MIMIC-IV 24 h mortality,cat_for_mlp,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.08701548916440742,-0.11535707241685537,-0.058673905911959465,1.2189418813868258e-05,15

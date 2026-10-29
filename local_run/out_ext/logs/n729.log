@@ -1,0 +1,18 @@
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_ext
+✅ EHR-ML helpers defined!
+[runner2 13:22:22] n729 draw 1/10 done
+[runner2 13:23:06] n729 draw 2/10 done
+[runner2 13:23:49] n729 draw 3/10 done
+[runner2 13:24:29] n729 draw 4/10 done
+[runner2 13:25:13] n729 draw 5/10 done
+[runner2 13:25:51] n729 draw 6/10 done
+[runner2 13:26:26] n729 draw 7/10 done
+[runner2 13:26:58] n729 draw 8/10 done
+[runner2 13:27:33] n729 draw 9/10 done
+[runner2 13:28:07] n729 draw 10/10 done

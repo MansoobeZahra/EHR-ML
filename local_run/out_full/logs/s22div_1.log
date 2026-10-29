@@ -1,0 +1,52 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_full
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+======================================================================
+STEP 22 | MIMIC LOS>7 (landmark 2d) | roster=diverse
+======================================================================
+  fold 1/15 done (12s)
+  fold 2/15 done (23s)
+  fold 3/15 done (34s)
+  fold 4/15 done (45s)
+  fold 5/15 done (55s)
+  fold 6/15 done (64s)
+  fold 7/15 done (74s)
+  fold 8/15 done (83s)
+  fold 9/15 done (92s)
+  fold 10/15 done (101s)
+  fold 11/15 done (111s)
+  fold 12/15 done (120s)
+  fold 13/15 done (129s)
+  fold 14/15 done (139s)
+  fold 15/15 done (148s)
+                     task                               method  roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC LOS>7 (landmark 2d)            XGB single (all features) diverse 0.7815    0.0284 0.1724 0.0550
+MIMIC LOS>7 (landmark 2d)             LR single (all features) diverse 0.7696    0.0238 0.1839 0.0890
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) diverse 0.7487    0.0246 0.2192 0.1783
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) diverse 0.7677    0.0204 0.1776 0.0631
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta diverse 0.7550    0.0229 0.1836 0.0723
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 diverse 0.7621    0.0198 0.1850 0.0863
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) diverse 0.7631    0.0168 0.1772 0.0544
+                     task                               method  roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC LOS>7 (landmark 2d)             LR single (all features) diverse                    -0.0120   -0.0318     0.0079         0.2174        15
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) diverse                    -0.0329   -0.0668     0.0010         0.0560        15
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) diverse                    -0.0138   -0.0424     0.0148         0.3167        15
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta diverse                    -0.0265   -0.0513    -0.0018         0.0376        15
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 diverse                    -0.0194   -0.0383    -0.0005         0.0447        15
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) diverse                    -0.0185   -0.0465     0.0096         0.1803        15
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.414                            0.428                            0.696

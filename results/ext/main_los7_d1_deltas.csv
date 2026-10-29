@@ -1,0 +1,15 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+ICU LOS>7 d (landmark 1 d),original,LR single (all features),XGB single (fixed config),auc,-0.019172125680753792,-0.03626792344095313,-0.002076327920554455,0.030558468567523978,15
+ICU LOS>7 d (landmark 1 d),original,LR single (all features),XGB single (fixed config),auprc,-0.036697883796431706,-0.07670995810846626,0.0033141905156028467,0.06930826305959537,15
+ICU LOS>7 d (landmark 1 d),original,CatBoost single (fixed config),XGB single (fixed config),auc,-0.006669467480881804,-0.019396652222953115,0.006057717261189506,0.2799418032474179,15
+ICU LOS>7 d (landmark 1 d),original,CatBoost single (fixed config),XGB single (fixed config),auprc,-0.019051013361305005,-0.04634481743278833,0.008242790710178322,0.1565813462019805,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.05846717252399989,-0.08519239057330459,-0.03174195447469519,0.00034627310866297556,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.0790320520314314,-0.14169476146859816,-0.016369342594264646,0.017086206106559088,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.025862425389315543,-0.045996135759601514,-0.005728715019029572,0.015490588759552226,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.05010357920920216,-0.10749708845603922,0.007289930037634916,0.08219256996630908,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, LR meta",XGB single (fixed config),auc,-0.032246208624956925,-0.05210363945591943,-0.012388777793994422,0.0036574988875175407,15
+ICU LOS>7 d (landmark 1 d),original,"Stack, LR meta",XGB single (fixed config),auprc,-0.056657009141949495,-0.10222815381683692,-0.01108586446706207,0.018424159971100806,15
+ICU LOS>7 d (landmark 1 d),original,Mean of Level-1,XGB single (fixed config),auc,-0.027974065391208874,-0.05351594840351803,-0.002432182378899715,0.03402690525144503,15
+ICU LOS>7 d (landmark 1 d),original,Mean of Level-1,XGB single (fixed config),auprc,-0.04655316296500066,-0.09110407867140313,-0.00200224725859819,0.041742051261407065,15
+ICU LOS>7 d (landmark 1 d),original,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.037234766756146925,-0.054999017681221674,-0.01947051583107218,0.0005034323565069609,15
+ICU LOS>7 d (landmark 1 d),original,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.07139399634197588,-0.10997575619863093,-0.03281223648532084,0.0013990193830792919,15

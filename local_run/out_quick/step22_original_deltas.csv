@@ -1,0 +1,19 @@
+task,method,roster,delta_AUROC_vs_XGB_single,CI95_low,CI95_high,p_corrected_t,n_scores
+MIMIC-IV 24h-window in-hospital mortality,LR single (all features),original,-0.0015990934775784,-0.0134553886944415,0.0102572017392847,0.7270631085092867,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, XGB meta (library defaults)",original,-0.0299999499443813,-0.0573846534124001,-0.0026152464763624,0.0383422406240465,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, XGB meta (fixed config)",original,-0.0014899764002925,-0.008270042455622,0.0052900896550368,0.5747273062344336,5
+MIMIC-IV 24h-window in-hospital mortality,"Stack, LR meta",original,0.0055046918420642,-0.0091086267288007,0.0201180104129292,0.3546609934793596,5
+MIMIC-IV 24h-window in-hospital mortality,Mean of Level-1,original,0.0026790290393121,-0.0082106492839831,0.0135687073626075,0.5320866873734307,5
+MIMIC-IV 24h-window in-hospital mortality,Best single Level-1 (picked in-fold),original,-0.07080131878353,-0.0926395719367711,-0.0489630656302889,0.0008433097702293,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),LR single (all features),original,-0.0161974437598108,-0.0531485107298752,0.0207536232102536,0.2904783368783388,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, XGB meta (library defaults)",original,-0.0394394395995469,-0.0612253393214926,-0.0176535398776011,0.0073528737518857,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, XGB meta (fixed config)",original,-0.0079265478624688,-0.0254064002845904,0.0095533045596527,0.276485521833357,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, LR meta",original,-0.0064977217917443,-0.022886087065541,0.0098906434820524,0.3327678599545514,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),Mean of Level-1,original,-0.0158161938088967,-0.0330443411610063,0.0014119535432129,0.0633794413267552,5
+eICU 72h-window in-hospital mortality (n=5000 subsample),Best single Level-1 (picked in-fold),original,-0.0596735045452309,-0.0912112800158002,-0.0281357290746615,0.0062826872393919,5
+MIMIC LOS>7 (landmark 2d),LR single (all features),original,-0.0094066728813039,-0.0565214433423916,0.0377080975797838,0.608884162819129,5
+MIMIC LOS>7 (landmark 2d),"Stack, XGB meta (library defaults)",original,-0.0346611332493333,-0.0920237741607639,0.0227015076620972,0.1687184379470281,5
+MIMIC LOS>7 (landmark 2d),"Stack, XGB meta (fixed config)",original,-0.0166090623296239,-0.0687638882602608,0.0355457636010129,0.4265445497380662,5
+MIMIC LOS>7 (landmark 2d),"Stack, LR meta",original,-0.0031542766606227,-0.0473887288578917,0.0410801755366462,0.8527128579658931,5
+MIMIC LOS>7 (landmark 2d),Mean of Level-1,original,-0.0099298918357195,-0.0377414159469087,0.0178816322754695,0.377648690065355,5
+MIMIC LOS>7 (landmark 2d),Best single Level-1 (picked in-fold),original,-0.0117469094700371,-0.0681699277291544,0.0446761087890801,0.5942199990588022,5

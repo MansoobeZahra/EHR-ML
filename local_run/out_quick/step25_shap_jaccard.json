@@ -1,0 +1,10 @@
+{
+ "MIMIC-IV 24h mortality": {
+  "mean_jaccard": 0.6855486542443063,
+  "min_jaccard": 0.6
+ },
+ "eICU 72h mortality": {
+  "mean_jaccard": 0.8125352907961604,
+  "min_jaccard": 0.7391304347826086
+ }
+}

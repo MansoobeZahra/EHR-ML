@@ -1,0 +1,8 @@
+task,method,roster,AUROC,AUROC_sd,Brier,ECE
+eICU 72h-window in-hospital mortality (n=12677 subsample),XGB single (all features),original,0.8528855478965368,0.0085876957525704,0.1080446766504308,0.0189976376696416
+eICU 72h-window in-hospital mortality (n=12677 subsample),LR single (all features),original,0.8319828373628343,0.0080619972063351,0.1129580707442593,0.0151765088616133
+eICU 72h-window in-hospital mortality (n=12677 subsample),"Stack, XGB meta (library defaults)",original,0.8294898628128505,0.0091857617798976,0.1189573925566839,0.0640673661415816
+eICU 72h-window in-hospital mortality (n=12677 subsample),"Stack, XGB meta (fixed config)",original,0.8498627823531117,0.0085260721291738,0.1082248268756368,0.0132612237286738
+eICU 72h-window in-hospital mortality (n=12677 subsample),"Stack, LR meta",original,0.8502323261476541,0.0085395456835948,0.108258376768695,0.0162917796762159
+eICU 72h-window in-hospital mortality (n=12677 subsample),Mean of Level-1,original,0.8336524722903557,0.008269094681149,0.1387293730697966,0.1033422509033145
+eICU 72h-window in-hospital mortality (n=12677 subsample),Best single Level-1 (picked in-fold),original,0.7937271855628819,0.0103699796686295,0.1356091114687859,0.0179663505705126

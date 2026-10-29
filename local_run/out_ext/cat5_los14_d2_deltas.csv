@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+ICU LOS>14 d (landmark 2 d),cat5,LR single (all features),XGB single (fixed config),auc,-0.03893665158371038,-0.08815231016423028,0.010279006996809524,0.1118383340153557,15
+ICU LOS>14 d (landmark 2 d),cat5,LR single (all features),XGB single (fixed config),auprc,-0.071223308482062,-0.14775010054778503,0.005303483583661048,0.06574787788125325,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.030482654600301654,-0.06386518125462037,0.0028998720540170733,0.0704046550026054,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.038866522568994796,-0.11777183346423564,0.04003878832624605,0.3086478065067122,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,7.541478129713397e-05,-0.029252986793107737,0.029403816355702005,0.9956774384493392,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.01128307975564939,-0.07209748526389934,0.04953132575260056,0.6966844451670706,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, LR meta",XGB single (fixed config),auc,0.005791855203619903,-0.03077199702337103,0.04235570743061084,0.7390935828907053,15
+ICU LOS>14 d (landmark 2 d),cat5,"Stack, LR meta",XGB single (fixed config),auprc,-0.0006249727543445623,-0.10243130893342038,0.10118136342473126,0.989680746162547,15
+ICU LOS>14 d (landmark 2 d),cat5,Mean of Level-1,XGB single (fixed config),auc,-0.0020889894419305814,-0.024517349644381205,0.020339370760520042,0.8445356732063112,15
+ICU LOS>14 d (landmark 2 d),cat5,Mean of Level-1,XGB single (fixed config),auprc,-0.0007807266093998547,-0.061983166870499345,0.06042171365169964,0.9785588706367025,15
+ICU LOS>14 d (landmark 2 d),cat5,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.004728506787330307,-0.043155535714932296,0.033698522140271685,0.7956871843738358,15
+ICU LOS>14 d (landmark 2 d),cat5,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.02346973853055651,-0.1047926824809195,0.057853205419806486,0.5458680162570873,15

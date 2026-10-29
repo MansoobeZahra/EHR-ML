@@ -1,0 +1,104 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_full
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+
+======================================================================
+STEP 25: SHAP fold stability and nested feature selection
+
+--- MIMIC-IV 24h mortality ---
+  fold 1/10 done
+  fold 2/10 done
+  fold 3/10 done
+  fold 4/10 done
+  fold 5/10 done
+  fold 6/10 done
+  fold 7/10 done
+  fold 8/10 done
+  fold 9/10 done
+  fold 10/10 done
+
+Top-20 SHAP set stability across 10 training folds: mean Jaccard = 0.612 (min 0.379)
+Selection frequency (share of folds with the feature in the top set):
+vitals_heart_rate_avg       1.0
+vitals_gcs_verbal_avg       1.0
+vitals_temperature_f_avg    1.0
+vitals_temperature_f_min    1.0
+vitals_spo2_min             1.0
+vitals_spo2_last            1.0
+labs_lactate_last           1.0
+vitals_spo2_avg             0.9
+labs_lactate_avg            0.9
+vitals_gcs_eye_last         0.9
+vitals_gcs_verbal_last      0.9
+vitals_gcs_eye_avg          0.9
+labs_bun_last               0.9
+labs_phosphate_last         0.9
+labs_glucose_first          0.7
+vitals_gcs_motor_last       0.7
+vitals_gcs_motor_avg        0.6
+labs_anion_gap_last         0.6
+vitals_heart_rate_min       0.5
+labs_hemoglobin_min         0.4
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.8096              0.8329       -0.0233   -0.0382    -0.0083         0.0064
+    20 0.8288              0.8329       -0.0041   -0.0175     0.0094         0.5138
+    30 0.8312              0.8329       -0.0017   -0.0088     0.0054         0.5980
+    40 0.8336              0.8329        0.0007   -0.0087     0.0100         0.8763
+
+--- eICU 72h mortality ---
+  fold 1/10 done
+  fold 2/10 done
+  fold 3/10 done
+  fold 4/10 done
+  fold 5/10 done
+  fold 6/10 done
+  fold 7/10 done
+  fold 8/10 done
+  fold 9/10 done
+  fold 10/10 done
+
+Top-20 SHAP set stability across 10 training folds: mean Jaccard = 0.821 (min 0.739)
+Selection frequency (share of folds with the feature in the top set):
+vitals_Heart Rate_avg           1.0
+vitals_Respiratory Rate_avg     1.0
+vitals_SpO2_avg                 1.0
+vitals_SpO2_min                 1.0
+labs_Hemoglobin_avg             1.0
+vitals_Heart Rate_last          1.0
+vitals_SpO2_last                1.0
+labs_BUN_last                   1.0
+labs_Platelets_last             1.0
+labs_Creatinine_last            1.0
+labs_WBC_last                   1.0
+labs_Platelets_min              1.0
+labs_Potassium_last             1.0
+labs_Hemoglobin_min             1.0
+vitals_Heart Rate_min           0.9
+labs_Glucose_max                0.9
+vitals_Heart Rate_max           0.9
+vitals_Respiratory Rate_last    0.9
+vitals_Respiratory Rate_min     0.6
+labs_Glucose_last               0.5
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.8302               0.842       -0.0118   -0.0199    -0.0036         0.0096
+    20 0.8384               0.842       -0.0036   -0.0077     0.0005         0.0814
+    30 0.8421               0.842        0.0002   -0.0021     0.0024         0.8640
+    40 0.8422               0.842        0.0002   -0.0038     0.0043         0.8933

@@ -1,0 +1,94 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+
+======================================================================
+STEP 25: SHAP fold stability and nested feature selection
+
+--- MIMIC-IV 24h mortality ---
+  fold 1/5 done
+  fold 2/5 done
+  fold 3/5 done
+  fold 4/5 done
+  fold 5/5 done
+
+Top-20 SHAP set stability across 5 training folds: mean Jaccard = 0.686 (min 0.600)
+Selection frequency (share of folds with the feature in the top set):
+vitals_gcs_eye_avg          1.0
+vitals_gcs_verbal_avg       1.0
+vitals_heart_rate_avg       1.0
+vitals_spo2_avg             1.0
+vitals_temperature_f_avg    1.0
+vitals_temperature_f_min    1.0
+vitals_spo2_min             1.0
+vitals_gcs_verbal_last      1.0
+labs_lactate_avg            1.0
+vitals_spo2_last            1.0
+vitals_gcs_eye_last         1.0
+labs_phosphate_last         1.0
+labs_bun_last               1.0
+labs_lactate_last           1.0
+labs_glucose_first          0.8
+vitals_gcs_motor_last       0.8
+vitals_gcs_motor_avg        0.6
+labs_anion_gap_last         0.6
+labs_hemoglobin_min         0.4
+vitals_heart_rate_min       0.4
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.8105              0.8326       -0.0220   -0.0368    -0.0073         0.0143
+    20 0.8360              0.8326        0.0034   -0.0111     0.0180         0.5475
+    30 0.8343              0.8326        0.0017   -0.0069     0.0103         0.6090
+    40 0.8355              0.8326        0.0029   -0.0094     0.0152         0.5450
+
+--- eICU 72h mortality ---
+  fold 1/5 done
+  fold 2/5 done
+  fold 3/5 done
+  fold 4/5 done
+  fold 5/5 done
+
+Top-20 SHAP set stability across 5 training folds: mean Jaccard = 0.813 (min 0.739)
+Selection frequency (share of folds with the feature in the top set):
+vitals_Heart Rate_avg           1.0
+vitals_Respiratory Rate_avg     1.0
+vitals_SpO2_avg                 1.0
+vitals_Heart Rate_max           1.0
+vitals_SpO2_min                 1.0
+vitals_SpO2_last                1.0
+vitals_Respiratory Rate_last    1.0
+vitals_Heart Rate_last          1.0
+labs_Hemoglobin_avg             1.0
+labs_Creatinine_last            1.0
+labs_WBC_last                   1.0
+labs_BUN_last                   1.0
+labs_Potassium_last             1.0
+labs_Platelets_min              1.0
+labs_Hemoglobin_min             1.0
+labs_Platelets_last             1.0
+labs_Glucose_max                0.8
+vitals_Heart Rate_min           0.8
+vitals_Respiratory Rate_min     0.6
+labs_Glucose_last               0.6
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.8297              0.8432       -0.0135   -0.0231    -0.0039         0.0176
+    20 0.8379              0.8432       -0.0053   -0.0075    -0.0031         0.0026
+    30 0.8431              0.8432       -0.0001   -0.0033     0.0032         0.9599
+    40 0.8431              0.8432       -0.0000   -0.0037     0.0036         0.9835

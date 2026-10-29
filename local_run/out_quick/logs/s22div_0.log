@@ -1,0 +1,42 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+======================================================================
+STEP 22 | MIMIC-IV 24h-window in-hospital mortality | roster=diverse
+======================================================================
+  fold 1/5 done (15s)
+  fold 2/5 done (27s)
+  fold 3/5 done (39s)
+  fold 4/5 done (51s)
+  fold 5/5 done (61s)
+                                     task                               method  roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC-IV 24h-window in-hospital mortality            XGB single (all features) diverse 0.8326    0.0142 0.1353 0.0426
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) diverse 0.8310    0.0144 0.1381 0.0457
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) diverse 0.8055    0.0162 0.1643 0.1295
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) diverse 0.8299    0.0158 0.1373 0.0439
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta diverse 0.8316    0.0130 0.1375 0.0332
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 diverse 0.8296    0.0178 0.1458 0.0744
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) diverse 0.7725    0.0127 0.1572 0.0389
+                                     task                               method  roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) diverse                    -0.0016   -0.0135     0.0103         0.7271         5
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) diverse                    -0.0271   -0.0511    -0.0030         0.0353         5
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) diverse                    -0.0026   -0.0074     0.0022         0.2029         5
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta diverse                    -0.0010   -0.0115     0.0095         0.8059         5
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 diverse                    -0.0030   -0.0168     0.0108         0.5796         5
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) diverse                    -0.0601   -0.0919    -0.0282         0.0064         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value           0.57                             0.58                            0.829

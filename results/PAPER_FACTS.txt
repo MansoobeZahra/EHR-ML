@@ -1,0 +1,52 @@
+def_min: 2.7
+def_max: 3.9
+def_rel_min: 3.2
+def_rel_max: 4.9
+def_sig4: 3
+ece_def: ('0.066', '0.175')
+ece_single: ('0.020', '0.055')
+slope_def: ('0.30', '0.55')
+slope_single: ('0.80', '1.15')
+citl_def: ('+0.32', '+1.17')
+lr_min: −0.5
+lr_max: +0.4
+lr_sig: []
+fix_min: −1.6
+fix_max: −0.2
+fix_sig: []
+ece_reg: ('0.017', '0.071')
+mean_mimic24: +0.0
+mean_mimic24_sig: False
+mean_ece_mimic24: 0.081
+mean_eicu72: −2.0
+mean_eicu72_sig: True
+mean_ece_eicu72: 0.104
+best_min: 0.5
+best_max: 6.2
+auprc_los7_fix: ('−4.2', '−8.0', '−0.4', np.True_)
+n_settings: 22
+def_all_sigworse: 17
+def_all_sigbetter: 0
+def_all_range: ('2.0', '6.5')
+n_reg: 44
+reg_ns: 39
+reg_worse: [('main', 'los7_d1', 'Stack, XGB meta (fixed config)', '−2.6'), ('main', 'los7_d1', 'Stack, LR meta', '−3.2'), ('tuned', 'eicu72', 'Stack, XGB meta (tuned)', '−0.9'), ('tuned', 'eicu72', 'Stack, LR meta (tuned C)', '−0.7'), ('div', 'los7_d2', 'Stack, LR meta', '−2.6')]
+reg_better: []
+tuned_vs_fixed_better: [('mimic24', 'Stack, LR meta (tuned C)', '+0.8')]
+tuned_auc: {'mimic24': '0.837', 'eicu72': '0.856', 'los7_d2': '0.783', 'los14_d2': '0.807'}
+tune_gain: ('+0.2', '+1.2')
+tune_gain_sig: ['eicu72']
+tuned_stack: {'mimic24': {'Stack, XGB meta (tuned)': ('−0.0', np.False_), 'Stack, LR meta (tuned C)': ('+0.5', np.False_), 'Stack, XGB meta (library defaults)': ('−3.0', np.True_)}, 'eicu72': {'Stack, XGB meta (tuned)': ('−0.9', np.True_), 'Stack, LR meta (tuned C)': ('−0.7', np.True_), 'Stack, XGB meta (library defaults)': ('−2.9', np.True_)}, 'los7_d2': {'Stack, XGB meta (tuned)': ('−0.8', np.False_), 'Stack, LR meta (tuned C)': ('−0.2', np.False_), 'Stack, XGB meta (library defaults)': ('−3.5', np.True_)}, 'los14_d2': {'Stack, XGB meta (tuned)': ('−1.4', np.False_), 'Stack, LR meta (tuned C)': ('+0.3', np.False_), 'Stack, XGB meta (library defaults)': ('−6.5', np.True_)}}
+tuned_def_range: ('2.9', '6.5')
+corr: {'mimic24': ('0.90', '0.83'), 'eicu72': ('0.86', '0.76'), 'los7_d2': ('0.72', '0.70'), 'los14_d2': ('0.47', '0.51')}
+corr_main_range: ('0.47', '0.90')
+cat_range: ('−0.7', '+0.6')
+cat_sig: 0
+n729: {'Stack, XGB meta (fixed config)': ('−0.8', 0, 0), 'Stack, LR meta': ('−1.3', 0, 0), 'Stack, XGB meta (library defaults)': ('−3.0', 1, 0), 'Mean of Level-1': ('+0.8', 0, 0)}
+abl: {'mimic24': {'Vitals only': ('−3.4', np.True_), 'Labs only': ('−5.5', np.True_), 'Mean aggregate only': ('−0.7', np.True_), 'No clipping': ('+0.1', np.False_), 'n_features': 120}, 'eicu72': {'Vitals only': ('−6.1', np.True_), 'Labs only': ('−4.6', np.True_), 'Mean aggregate only': ('−6.0', np.True_), 'No clipping': ('−0.0', np.False_), 'n_features': 55}, 'los7_d2': {'Vitals only': ('−2.9', np.True_), 'Labs only': ('−5.9', np.True_), 'Mean aggregate only': ('−2.3', np.True_), 'No clipping': ('+0.2', np.False_), 'n_features': 145}, 'los14_d2': {'Vitals only': ('−1.6', np.False_), 'Labs only': ('−7.2', np.True_), 'Mean aggregate only': ('−2.7', np.True_), 'No clipping': ('+0.0', np.False_), 'n_features': 145}}
+cov_mimic: {0.7: (155, '+0.3', '−0.4', '+1.1', np.False_), 0.9: (105, '−0.8', '−2.1', '+0.5', np.False_)}
+cov_eicu: {0.6: (65, '+0.6', '+0.4', '+0.9', np.True_), 0.7: (60, '+0.3', '+0.1', '+0.4', np.True_), 0.9: (55, '+0.0', '+0.0', '+0.0', np.False_)}
+jac: {'mimic24': ('0.61', '0.38'), 'eicu72': ('0.85', '0.74')}
+sel: {'mimic24': {10: ('−2.3', np.True_), 20: ('−0.4', np.False_), 30: ('−0.2', np.False_), 40: ('+0.1', np.False_)}, 'eicu72': {10: ('−1.4', np.True_), 20: ('−0.3', np.True_), 30: ('−0.1', np.False_), 40: ('−0.1', np.False_)}}
+spearman: ('0.51', '0.28', '0.68', 55)
+nodeath: {'mimic24': {'excluded': 140, 'n': 2393, 'single_auc': '0.800', 'share_of_deaths': '19.9', 'Stack, XGB meta (library defaults)': ('−3.7', np.True_), 'Stack, XGB meta (fixed config)': ('−0.7', np.False_), 'Stack, LR meta': ('−0.5', np.False_)}, 'eicu72': {'excluded': 1230, 'n': 11447, 'single_auc': '0.772', 'share_of_deaths': '43.4', 'Stack, XGB meta (library defaults)': ('−4.7', np.True_), 'Stack, XGB meta (fixed config)': ('−0.6', np.True_), 'Stack, LR meta': ('−0.4', np.False_)}}

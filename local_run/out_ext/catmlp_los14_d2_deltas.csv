@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,LR single (all features),XGB single (fixed config),auc,-0.03893665158371038,-0.08815231016423028,0.010279006996809524,0.1118383340153557,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,LR single (all features),XGB single (fixed config),auprc,-0.071223308482062,-0.14775010054778503,0.005303483583661048,0.06574787788125325,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.028506787330316745,-0.05975351267940353,0.002739938018770042,0.07062899973871795,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.04438622049914972,-0.1151088113182338,0.026336370319934375,0.19966640439440897,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.0003167420814479627,-0.028910671195771512,0.02827718703287559,0.9813806883867475,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,0.00030354928950385716,-0.07768798089810387,0.07829507947711158,0.9934573778671456,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, LR meta",XGB single (fixed config),auc,0.006229260935143281,-0.026268380730361064,0.03872690260064763,0.6872083491874497,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,"Stack, LR meta",XGB single (fixed config),auprc,0.00599354041159971,-0.07624681052915837,0.08823389135235778,0.8780214560884125,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,Mean of Level-1,XGB single (fixed config),auc,5.279034690799378e-05,-0.019474757941107566,0.01958033863492355,0.9954555675586061,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,Mean of Level-1,XGB single (fixed config),auprc,-0.0038162720912134946,-0.06604141024836652,0.05840886606593953,0.8972198600121855,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.004728506787330307,-0.043155535714932296,0.033698522140271685,0.7956871843738358,15
+ICU LOS>14 d (landmark 2 d),cat_for_mlp,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.02346973853055651,-0.1047926824809195,0.057853205419806486,0.5458680162570873,15

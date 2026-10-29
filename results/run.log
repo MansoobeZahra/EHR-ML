@@ -1,0 +1,187 @@
+[runner 10:26:43] QUICK=True OUT=/home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick jobs=8
+[runner 10:26:43] build: start
+[restart 2026-10-21 13:12:23] previous build was killed at cell 2 when the session ended; xgboost pinned to 2.1.4
+[runner 13:12:23] QUICK=True OUT=/home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick jobs=8
+[runner 13:12:23] build: start
+[runner 13:21:26] build: exit 0 after 544s
+[runner 13:21:26] build checks: {  "mimic_icd_cohort_episodes": 2545,  "mimic_icd_cohort_patients": 2545,  "mimic_24h_matrix_rows": 2533,  "mimic_24h_matrix_features": 120,  "eicu_cohort_episodes": 12688,  "eicu_cohort_patients": 10842,  "eicu_cohort_mortality": 0.22383354350567466,  "eicu_72h_rows_50pct_build": 12677,  "eicu_72h_features_at_80pct": 55,  "eicu_72h_features_at_50pct": 65,  "los_landmark_tasks": {   "MIMIC LOS>7 (landmark 2d)": [    1470,    0.319047619047619   ],   "MIMIC LOS>14 (landmark 2d)": [    1470,    0.11564625850340136   ]  },  "mimic24_unfiltered_features": 170,  "build_seconds": 543 }
+[runner 12:25:56] QUICK=True OUT=/home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick jobs=9
+[runner 12:25:56] build: cache present, skipped
+[runner 12:25:56] build checks: {  "mimic_icd_cohort_episodes": 2545,  "mimic_icd_cohort_patients": 2545,  "mimic_24h_matrix_rows": 2533,  "mimic_24h_matrix_features": 120,  "eicu_cohort_episodes": 12688,  "eicu_cohort_patients": 10842,  "eicu_cohort_mortality": 0.22383354350567466,  "eicu_72h_rows_50pct_build": 12677,  "eicu_72h_features_at_80pct": 55,  "eicu_72h_features_at_50pct": 65,  "los_landmark_tasks": {   "MIMIC LOS>7 (landmark 2d)": [    1470,    0.319047619047619   ],   "MIMIC LOS>14 (landmark 2d)": [    1470,    0.11564625850340136   ]  },  "mimic24_unfiltered_features": 170,  "build_seconds": 543 }
+[runner 12:25:56] units to run: ['s22orig_1', 's22orig_0', 's22orig_2', 's22div_0', 's22div_1', 's26_los14', 's23', 's24', 's25'] (skipped done: [])
+[runner 12:25:56] start s22orig_1 (threads=2)
+[runner 12:25:56] start s22orig_0 (threads=2)
+[runner 12:25:56] start s22orig_2 (threads=2)
+[runner 12:25:56] start s22div_0 (threads=2)
+[runner 12:25:56] start s22div_1 (threads=2)
+[runner 12:25:56] start s26_los14 (threads=2)
+[runner 12:25:56] start s23 (threads=2)
+[runner 12:25:56] start s24 (threads=2)
+[runner 12:25:56] start s25 (threads=2)
+[runner 12:26:16] done  s22orig_0 in 20s
+[runner 12:26:16] done  s22orig_2 in 20s
+[runner 12:26:16] done  s26_los14 in 20s
+[runner 12:26:16] done  s24 in 20s
+[runner 12:26:16] done  s25 in 20s
+[runner 12:26:36] done  s22orig_1 in 40s
+[runner 12:26:56] done  s22div_1 in 60s
+[runner 12:26:56] done  s23 in 60s
+[runner 12:27:16] done  s22div_0 in 80s
+[runner 12:27:17] merged step22 parts
+[runner 12:27:17] all finished in 80s
+[chain 12:27:17] smoke run clean; starting full run
+[runner 12:27:17] QUICK=False OUT=/home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_full jobs=9
+[runner 12:27:17] build: cache present, skipped
+[runner 12:27:17] build checks: {  "mimic_icd_cohort_episodes": 2545,  "mimic_icd_cohort_patients": 2545,  "mimic_24h_matrix_rows": 2533,  "mimic_24h_matrix_features": 120,  "eicu_cohort_episodes": 12688,  "eicu_cohort_patients": 10842,  "eicu_cohort_mortality": 0.22383354350567466,  "eicu_72h_rows_50pct_build": 12677,  "eicu_72h_features_at_80pct": 55,  "eicu_72h_features_at_50pct": 65,  "los_landmark_tasks": {   "MIMIC LOS>7 (landmark 2d)": [    1470,    0.319047619047619   ],   "MIMIC LOS>14 (landmark 2d)": [    1470,    0.11564625850340136   ]  },  "mimic24_unfiltered_features": 170,  "build_seconds": 543 }
+[runner 12:27:17] units to run: ['s22orig_1', 's22orig_0', 's22orig_2', 's22div_0', 's22div_1', 's26_los14', 's23', 's24', 's25'] (skipped done: [])
+[runner 12:27:17] start s22orig_1 (threads=2)
+[runner 12:27:17] start s22orig_0 (threads=2)
+[runner 12:27:17] start s22orig_2 (threads=2)
+[runner 12:27:17] start s22div_0 (threads=2)
+[runner 12:27:17] start s22div_1 (threads=2)
+[runner 12:27:17] start s26_los14 (threads=2)
+[runner 12:27:17] start s23 (threads=2)
+[runner 12:27:17] start s24 (threads=2)
+[runner 12:27:17] start s25 (threads=2)
+[runner 12:27:37] done  s25 in 20s
+[runner 12:27:57] done  s26_los14 in 40s
+[runner 12:27:57] done  s24 in 40s
+[runner 12:28:17] done  s22orig_0 in 60s
+[runner 12:28:17] done  s22orig_2 in 60s
+[runner 12:28:17] done  s23 in 60s
+[runner 12:28:37] done  s22orig_1 in 80s
+[runner 12:29:57] done  s22div_1 in 160s
+[runner 12:30:37] done  s22div_0 in 200s
+[runner 12:30:37] merged step22 parts
+[runner 12:30:37] all finished in 200s
+[full-eICU 2026-10-22 12:33:38] Step 22 eICU task and Step 25 with EICU_N=100000 (no subsample, all 12,677 rows)
+[runner 12:33:38] QUICK=False OUT=/home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_full_eicu_all jobs=2
+[runner 12:33:38] build: cache present, skipped
+[runner 12:33:38] build checks: {  "mimic_icd_cohort_episodes": 2545,  "mimic_icd_cohort_patients": 2545,  "mimic_24h_matrix_rows": 2533,  "mimic_24h_matrix_features": 120,  "eicu_cohort_episodes": 12688,  "eicu_cohort_patients": 10842,  "eicu_cohort_mortality": 0.22383354350567466,  "eicu_72h_rows_50pct_build": 12677,  "eicu_72h_features_at_80pct": 55,  "eicu_72h_features_at_50pct": 65,  "los_landmark_tasks": {   "MIMIC LOS>7 (landmark 2d)": [    1470,    0.319047619047619   ],   "MIMIC LOS>14 (landmark 2d)": [    1470,    0.11564625850340136   ]  },  "mimic24_unfiltered_features": 170,  "build_seconds": 543 }
+[runner 12:33:38] units to run: ['s22orig_1', 's25'] (skipped done: ['s22orig_0', 's22orig_2', 's22div_0', 's22div_1', 's26_los14', 's23', 's24'])
+[runner 12:33:38] start s22orig_1 (threads=12)
+[runner 12:33:38] start s25 (threads=12)
+[runner 12:33:58] done  s25 in 20s
+[runner 12:35:58] done  s22orig_1 in 140s
+[runner 12:35:58] merged step22 parts
+[runner 12:35:58] all finished in 140s
+[ext 2026-10-22 12:50:51] build2: landmark 1 d and 2 d, clipped and unclipped
+[ext 2026-10-22 13:16:33] Step 27 units: tuned, diverse eICU, CatBoost rosters, n=729 x10 draws x3 repeats, landmark 1d, ablation, SHAP (engine check passed: 0 difference vs Step 22)
+[runner2 13:16:33] 28 units to run, jobs=6, threads=4
+[runner2 13:16:33] start tuned:eicu72
+[runner2 13:16:33] start tuned:mimic24
+[runner2 13:16:33] start tuned:los7_d2
+[runner2 13:16:33] start tuned:los14_d2
+[runner2 13:16:33] start catmlp:eicu72
+[runner2 13:16:33] start cat5:eicu72
+[runner2 13:18:48] done  catmlp:eicu72 in 135s
+[runner2 13:18:48] start div:eicu72
+[runner2 13:20:48] done  cat5:eicu72 in 255s
+[runner2 13:20:48] start main:eicu72
+[runner2 13:21:33] done  tuned:los14_d2 in 300s
+[runner2 13:21:33] start n729
+[runner2 13:22:18] done  tuned:los7_d2 in 345s
+[runner2 13:22:18] start catmlp:mimic24
+[runner2 13:22:48] done  tuned:mimic24 in 375s
+[runner2 13:22:48] start catmlp:los7_d2
+[runner2 13:23:48] done  main:eicu72 in 180s
+[runner2 13:23:48] done  catmlp:mimic24 in 90s
+[runner2 13:23:48] start catmlp:los14_d2
+[runner2 13:23:48] start cat5:mimic24
+[runner2 13:24:18] done  catmlp:los7_d2 in 90s
+[runner2 13:24:18] start cat5:los7_d2
+[runner2 13:25:03] done  catmlp:los14_d2 in 75s
+[runner2 13:25:03] start cat5:los14_d2
+[runner2 13:25:48] done  cat5:mimic24 in 120s
+[runner2 13:25:48] start div:mimic24
+[runner2 13:26:03] done  cat5:los7_d2 in 105s
+[runner2 13:26:03] start div:los7_d2
+[runner2 13:26:33] done  div:eicu72 in 465s
+[runner2 13:26:33] done  cat5:los14_d2 in 90s
+[runner2 13:26:33] start div:los14_d2
+[runner2 13:26:33] start main:mimic24
+[runner2 13:26:48] done  tuned:eicu72 in 616s
+[runner2 13:26:48] start main:los7_d2
+[runner2 13:27:48] done  main:mimic24 in 75s
+[runner2 13:27:48] done  main:los7_d2 in 60s
+[runner2 13:27:48] start main:los14_d2
+[runner2 13:27:48] start main:los7_d1
+[runner2 13:28:18] done  n729 in 405s
+[runner2 13:28:18] start main:los14_d1
+[runner2 13:28:48] done  main:los14_d2 in 60s
+[runner2 13:28:48] done  main:los7_d1 in 60s
+[runner2 13:28:48] start abl:mimic24
+[runner2 13:28:48] start abl:eicu72
+[runner2 13:29:03] done  abl:mimic24 in 15s
+[runner2 13:29:03] done  abl:eicu72 in 15s
+[runner2 13:29:03] start abl:los7_d2
+[runner2 13:29:03] start abl:los14_d2
+[runner2 13:29:18] done  div:los7_d2 in 195s
+[runner2 13:29:18] done  main:los14_d1 in 60s
+[runner2 13:29:18] done  abl:los7_d2 in 15s
+[runner2 13:29:18] done  abl:los14_d2 in 15s
+[runner2 13:29:18] start shap
+[runner2 13:29:33] done  div:mimic24 in 225s
+[runner2 13:29:33] done  shap in 15s
+[runner2 13:29:48] done  div:los14_d2 in 195s
+[runner2 13:29:48] all finished in 796s
+[ext2 2026-10-26 14:19:30] eICU re-run with patient-grouped outer folds + early-death sensitivity (MIMIC, eICU)
+[runner2 14:19:30] 10 units to run, jobs=6, threads=4
+[runner2 14:19:30] start tuned:eicu72
+[runner2 14:19:30] start catmlp:eicu72
+[runner2 14:19:30] start cat5:eicu72
+[runner2 14:19:30] start div:eicu72
+[runner2 14:19:30] start main:eicu72
+[runner2 14:19:30] start nodeath:eicu72
+[runner2 14:19:45] FAIL  cat5:eicu72 exit 1
+[runner2 14:19:45] FAIL  div:eicu72 exit 1
+[runner2 14:19:45] FAIL  main:eicu72 exit 1
+[runner2 14:19:45] FAIL  nodeath:eicu72 exit 1
+[runner2 14:19:45] start nodeath:mimic24
+[runner2 14:19:45] start abl:eicu72
+[runner2 14:19:45] start cov:eicu72
+[runner2 14:19:45] start shapstab:eicu72
+[runner2 14:20:00] FAIL  nodeath:mimic24 exit 1
+[runner2 14:20:00] FAIL  abl:eicu72 exit 1
+[runner2 14:20:00] FAIL  cov:eicu72 exit 1
+[runner2 14:20:00] FAIL  shapstab:eicu72 exit 1
+[ext2 2026-10-26 14:20:47] relaunch with CUDA_VISIBLE_DEVICES='' (xgboost CUDA error while GPU in use by another job)
+[runner2 14:20:47] 10 units to run, jobs=6, threads=4
+[runner2 14:20:47] start tuned:eicu72
+[runner2 14:20:47] start catmlp:eicu72
+[runner2 14:20:47] start cat5:eicu72
+[runner2 14:20:47] start div:eicu72
+[runner2 14:20:47] start main:eicu72
+[runner2 14:20:47] start nodeath:eicu72
+[runner2 14:21:15] done  catmlp:eicu72 in 105s
+[runner2 14:26:32] done  nodeath:eicu72 in 345s
+[runner2 14:26:32] start nodeath:mimic24
+[runner2 14:26:47] done  catmlp:eicu72 in 360s
+[runner2 14:26:47] start abl:eicu72
+[runner2 14:27:32] done  abl:eicu72 in 45s
+[runner2 14:27:32] start cov:eicu72
+[runner2 14:27:47] done  main:eicu72 in 420s
+[runner2 14:27:47] start shapstab:eicu72
+[runner2 14:28:02] done  shapstab:eicu72 in 15s
+[runner2 14:28:17] done  cov:eicu72 in 45s
+[runner2 14:28:32] done  cat5:eicu72 in 466s
+[runner2 14:28:32] done  nodeath:mimic24 in 120s
+[runner2 14:31:48] done  div:eicu72 in 661s
+[runner2 14:34:18] done  tuned:eicu72 in 811s
+[runner2 14:34:18] all finished in 811s
+[ext3 2026-10-26 23:12:10] eICU re-run with patient-grouped INNER splits and tuning searches (outer already grouped)
+[runner2 23:12:10] 6 units to run, jobs=6, threads=4
+[runner2 23:12:10] start tuned:eicu72
+[runner2 23:12:10] start div:eicu72
+[runner2 23:12:10] start cat5:eicu72
+[runner2 23:12:10] start catmlp:eicu72
+[runner2 23:12:10] start main:eicu72
+[runner2 23:12:10] start nodeath:eicu72
+[runner2 23:14:40] done  catmlp:eicu72 in 150s
+[runner2 23:14:40] done  nodeath:eicu72 in 150s
+[runner2 23:15:25] done  main:eicu72 in 195s
+[runner2 23:16:10] done  cat5:eicu72 in 240s
+[runner2 23:19:25] done  div:eicu72 in 435s
+[runner2 23:21:10] done  tuned:eicu72 in 541s
+[runner2 23:21:10] all finished in 541s
+[ext4 2026-10-26 23:35:59] eICU check: exclude 104 stays with missing discharge status (grouped outer+inner)

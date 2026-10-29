@@ -1,0 +1,180 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick
+[runner] cell 1 done in 0s
+[runner] cell 2 start
+Loading small MIMIC-IV tables...
+Identifying cohort patients and episodes to optimize memory...
+  Found 14286 total unique hadm_ids in sepsis cohorts
+Loading large tables with memory-efficient filtering...
+  Reading labevents.csv.gz in chunks of 5,000,000...
+  Reading chartevents.csv.gz in chunks of 5,000,000...
+  admissions    : (546028, 16)
+  patients      : (364627, 6)
+  diagnoses_icd : (6364488, 5)
+  microbiologyevents: (3988224, 6)
+  labevents     : (6119891, 5)
+  icustays      : (94458, 8)
+  chartevents   : (13484854, 6)
+✅ All tables loaded and filtered!
+[runner] cell 2 done in 365s
+[runner] cell 3 start
+Stepwise diagnostic logging for ICD cohort:
+  Stage 1: Raw ICD match: 15,880 patients, 19,304 episodes
+  Stage 2: + Has ICU stay: 11,465 patients, 13,227 episodes
+  Stage 3: + Adult-only (age >= 18): 11,465 patients, 13,227 episodes
+
+Audit results:
+  Variant A (exact codes + ICU stay): 13227 episodes, 11465 patients
+  Variant B (Variant A + seq_num == 1): 2860 episodes, 2657 patients
+
+Extra paper-alignment cohort variants:
+  Variant C = B + first ICU stay per admission: 2860 episodes, 2657 patients
+  Variant D = C + ICU within 48h of hospital admission: 2732 episodes, 2545 patients
+  Variant E = D + first sepsis admission per patient: 2545 episodes, 2545 patients
+
+Selecting Variant E (closest to 729 episodes): 2545 eps, 2545 pts
+
+MIMIC-IV ICD Cohort:
+  Patients : 2,545  (paper: 691)
+  Episodes : 2,545  (paper: 729)
+  Mortality: 27.9%
+  LOS>7    : 18.4%
+  LOS>14   : 6.7%
+[runner] cell 3 done in 0s
+[runner] cell 4 start
+Stepwise diagnostic logging for Micro cohort:
+  Stage 1: Raw microbio events: 109,308 patients, 201,096 episodes
+  Stage 2: + Blood cultures: 64,752 patients, 103,670 episodes
+  Stage 3: + Positive blood cultures: 7,241 patients, 8,261 episodes
+  Stage 4a: Positive blood cultures (no contaminant exclusion): 7,241 patients, 8,261 episodes
+  Stage 4b: Positive blood cultures (with contaminant exclusion): 5,370 patients, 6,050 episodes
+MIMIC-IV Micro Cohort:
+  Patients : 2,256  (paper: 1790)
+  Episodes : 2,351  (paper: 1790)
+  Mortality: 25.9%
+[runner] cell 4 done in 0s
+[runner] cell 5 start
+Vital sign features : 10
+Lab result features : 24
+[runner] cell 5 done in 0s
+[runner] cell 6 start
+eICU diagnosis: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/diagnosis.csv.gz
+eICU patient  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/patient.csv.gz
+eICU vitals   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/vitalPeriodic.csv.gz
+eICU lab      : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/lab.csv.gz
+[runner] cell 6 done in 0s
+[runner] cell 7 start
+
+Building data matrix [ICD (all admission)] (2545 episodes, cov≥80%)...
+  Total features        : 170
+  After cov ≥80%     : 155
+  Final shape           : (2545, 164)
+  Mortality rate        : 27.9%
+
+Building data matrix [ICD (first 24h)] (2545 episodes, cov≥80%)...
+  Applying window filter: WB=0, WA=1 relative to anchor=intime
+  Total features        : 170
+  After cov ≥80%     : 120
+  Final shape           : (2545, 129)
+  Mortality rate        : 27.9%
+
+Building data matrix [ICD (first 24h hospital admission)] (2545 episodes, cov≥80%)...
+  Applying window filter: WB=0, WA=1 relative to anchor=admittime
+  Total features        : 170
+  After cov ≥80%     : 120
+  Final shape           : (2533, 129)
+  Mortality rate        : 27.8%
+
+Building data matrix [Micro (all admission)] (2351 episodes, cov≥80%)...
+  Total features        : 170
+  After cov ≥80%     : 155
+  Final shape           : (2351, 164)
+  Mortality rate        : 25.9%
+
+Building data matrix [Micro (first 24h)] (2351 episodes, cov≥80%)...
+  Applying window filter: WB=0, WA=1 relative to anchor=intime
+  Total features        : 170
+  After cov ≥80%     : 115
+  Final shape           : (2351, 124)
+  Mortality rate        : 25.9%
+[runner] cell 7 done in 6s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 9 start
+MIMIC 24h matrix (QC clipped): (2533, 129)
+[runner] cell 9 done in 0s
+[runner] cell 10 start
+eICU patient: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/patient.csv.gz
+eICU diagnosis: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/diagnosis.csv.gz
+eICU vitals: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/vitalPeriodic.csv.gz
+eICU labs: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0/lab.csv.gz
+patient: (200859, 5)
+diagnosis: (2710672, 2)
+Raw eICU sepsis diagnosis rows: 68581
+Unique eICU sepsis stays: 12694
+
+Final eICU ICD cohort:
+episodes: 12688
+patients : 10842
+mortality: 22.38 %
+Paper eICU target: 9612 patients / 11146 episodes
+
+Vital columns used: ['patientunitstayid', 'observationoffset', 'heartrate', 'respiration', 'sao2', 'temperature', 'systemicsystolic', 'systemicdiastolic', 'systemicmean']
+Processed vital chunk 0
+Processed vital chunk 20
+Processed vital chunk 40
+Processed vital chunk 60
+eICU wide vitals: (12619, 36)
+Processed lab chunk 0
+Processed lab chunk 10
+eICU wide labs: (12652, 51)
+
+eICU data matrix: (12686, 72)
+eICU feature cols kept: 65
+eICU mortality: 22.39 %
+Kept features: ['vitals_Heart Rate_avg', 'vitals_Respiratory Rate_avg', 'vitals_SpO2_avg', 'vitals_Heart Rate_min', 'vitals_Respiratory Rate_min', 'vitals_SpO2_min', 'vitals_Heart Rate_max', 'vitals_Respiratory Rate_max', 'vitals_SpO2_max', 'vitals_Heart Rate_first', 'vitals_Respiratory Rate_first', 'vitals_SpO2_first', 'vitals_Heart Rate_last', 'vitals_Respiratory Rate_last', 'vitals_SpO2_last', 'labs_BUN_avg', 'labs_Bilirubin_avg', 'labs_Creatinine_avg', 'labs_Glucose_avg', 'labs_Hemoglobin_avg', 'labs_Lactate_avg', 'labs_Platelets_avg', 'labs_Potassium_avg', 'labs_Sodium_avg', 'labs_WBC_avg', 'labs_BUN_min', 'labs_Bilirubin_min', 'labs_Creatinine_min', 'labs_Glucose_min', 'labs_Hemoglobin_min', 'labs_Lactate_min', 'labs_Platelets_min', 'labs_Potassium_min', 'labs_Sodium_min', 'labs_WBC_min', 'labs_BUN_max', 'labs_Bilirubin_max', 'labs_Creatinine_max', 'labs_Glucose_max', 'labs_Hemoglobin_max', 'labs_Lactate_max', 'labs_Platelets_max', 'labs_Potassium_max', 'labs_Sodium_max', 'labs_WBC_max', 'labs_BUN_first', 'labs_Bilirubin_first', 'labs_Creatinine_first', 'labs_Glucose_first', 'labs_Hemoglobin_first', 'labs_Lactate_first', 'labs_Platelets_first', 'labs_Potassium_first', 'labs_Sodium_first', 'labs_WBC_first', 'labs_BUN_last', 'labs_Bilirubin_last', 'labs_Creatinine_last', 'labs_Glucose_last', 'labs_Hemoglobin_last', 'labs_Lactate_last', 'labs_Platelets_last', 'labs_Potassium_last', 'labs_Sodium_last', 'labs_WBC_last']
+Saved: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick/data_matrix_eicu.csv
+
+Building 72h-windowed eICU matrix...
+Processed 72h vital chunk 0
+Processed 72h vital chunk 20
+Processed 72h vital chunk 40
+Processed 72h vital chunk 60
+eICU 72h vitals shape: (12612, 36)
+Processed 72h lab chunk 0
+Processed 72h lab chunk 10
+eICU 72h labs shape: (12526, 51)
+eICU 72h matrix: (12677, 72)
+eICU 72h feature cols: 65
+Saved: /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick/data_matrix_eicu_72h.csv
+[runner] cell 10 done in 169s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+
+Building LOS landmark tasks ...
+
+Building data matrix [ICD LOS landmark 2d] (2545 episodes, cov≥80%)...
+  Applying window filter: WB=0, WA=2 relative to anchor=intime
+  Total features        : 170
+  After cov ≥80%     : 145
+  Final shape           : (2545, 154)
+  Mortality rate        : 27.9%
+  landmark 2d: 2545 -> 1470 episodes still in ICU; LOS>7 prevalence 31.9%, LOS>14 prevalence 11.6%
+
+Building data matrix [ICD 24h, unfiltered] (2545 episodes, cov≥0%)...
+  Applying window filter: WB=0, WA=1 relative to anchor=admittime
+  Total features        : 170
+  After cov ≥0%     : 170
+  Final shape           : (2533, 179)
+  Mortality rate        : 27.8%
+[runner 13:21:26] build checks: {"mimic_icd_cohort_episodes": 2545, "mimic_icd_cohort_patients": 2545, "mimic_24h_matrix_rows": 2533, "mimic_24h_matrix_features": 120, "eicu_cohort_episodes": 12688, "eicu_cohort_patients": 10842, "eicu_cohort_mortality": 0.22383354350567466, "eicu_72h_rows_50pct_build": 12677, "eicu_72h_features_at_80pct": 55, "eicu_72h_features_at_50pct": 65, "los_landmark_tasks": {"MIMIC LOS>7 (landmark 2d)": [1470, 0.319047619047619], "MIMIC LOS>14 (landmark 2d)": [1470, 0.11564625850340136]}, "mimic24_unfiltered_features": 170, "build_seconds": 543}

@@ -1,0 +1,15 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72 h mortality,original,LR single (all features),XGB single (fixed config),auc,-0.021453983684235827,-0.029894706508117902,-0.013013260860353754,8.533836562718555e-05,15
+eICU 72 h mortality,original,LR single (all features),XGB single (fixed config),auprc,-0.023566893790046877,-0.03553347080140369,-0.011600316778690063,0.0008500868625918034,15
+eICU 72 h mortality,original,CatBoost single (fixed config),XGB single (fixed config),auc,-0.001790707661358515,-0.004059801136964385,0.00047838581424735553,0.11265553301933906,15
+eICU 72 h mortality,original,CatBoost single (fixed config),XGB single (fixed config),auprc,-0.0015285777047067425,-0.006623230338158439,0.003566074928744954,0.5302922777545769,15
+eICU 72 h mortality,original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.02220454031529322,-0.029420796486807226,-0.014988284143779214,1.1902759800230811e-05,15
+eICU 72 h mortality,original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.027400222058628028,-0.040387042853480035,-0.014413401263776018,0.0004757263097709963,15
+eICU 72 h mortality,original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.003429701882784131,-0.007330993833703286,0.000471590068135025,0.08028274467579144,15
+eICU 72 h mortality,original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.0008587335058405069,-0.00742945309902059,0.005711986087339576,0.7833434759879503,15
+eICU 72 h mortality,original,"Stack, LR meta",XGB single (fixed config),auc,-0.0018918160215458297,-0.006414818542782053,0.002631186499690394,0.3848379948924796,15
+eICU 72 h mortality,original,"Stack, LR meta",XGB single (fixed config),auprc,-0.0016662391539914593,-0.012501608302133857,0.009169129994150937,0.7464186780772066,15
+eICU 72 h mortality,original,Mean of Level-1,XGB single (fixed config),auc,-0.019731429557666432,-0.025692084819646476,-0.013770774295686388,5.33831986992972e-06,15
+eICU 72 h mortality,original,Mean of Level-1,XGB single (fixed config),auprc,-0.03888746756125343,-0.052019787733019573,-0.025755147389487282,1.7948711252824268e-05,15
+eICU 72 h mortality,original,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.05889872909234487,-0.06835128809887649,-0.04944617008581325,2.3212007871364904e-09,15
+eICU 72 h mortality,original,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.1524666197389673,-0.1728458973861034,-0.1320873420918312,2.0792789712231752e-10,15

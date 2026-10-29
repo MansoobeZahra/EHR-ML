@@ -1,0 +1,7 @@
+task,method,roster,delta_AUROC_vs_XGB_single,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72h-window in-hospital mortality (n=5000 subsample),LR single (all features),original,-0.01535552093540343,-0.035937231781660334,0.005226189910853475,0.13187701804335705,15
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, XGB meta (library defaults)",original,-0.032745278847155196,-0.04729501868613098,-0.01819553900817941,0.00026859491552766457,15
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, XGB meta (fixed config)",original,-0.0063983298056720095,-0.015827226112870643,0.003030566501526626,0.1676071932694967,15
+eICU 72h-window in-hospital mortality (n=5000 subsample),"Stack, LR meta",original,-0.0034600511776281023,-0.012255354162198497,0.005335251806942293,0.4129921665118883,15
+eICU 72h-window in-hospital mortality (n=5000 subsample),Mean of Level-1,original,-0.014475813904657337,-0.023647841058642073,-0.0053037867506726,0.004443310331302408,15
+eICU 72h-window in-hospital mortality (n=5000 subsample),Best single Level-1 (picked in-fold),original,-0.05771148997815153,-0.07644358306066132,-0.038979396895641734,1.1742142775217346e-05,15

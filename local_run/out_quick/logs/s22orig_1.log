@@ -1,0 +1,42 @@
+[runner] cell 1 start
+MIMIC_DIR: /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1 exists: True
+EICU_DIR : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0 exists: True
+MIMIC_DIR : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1  (exists=True)
+EICU_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/eicu-collaborative-research-database-2.0   (exists=True)
+HOSP_DIR  : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/hosp   (exists=True)
+ICU_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/mimic-iv-3.1/icu    (exists=True)
+OUT_DIR   : /home/cvl/Desktop/Speech to sign/Colacare/Res_02/local_run/out_quick
+[runner] cell 1 done in 0s
+[runner] cell 8 start
+✅ EHR-ML helpers defined!
+[runner] cell 8 done in 1s
+[runner] cell 12 start
+[runner] cell 12 done in 0s
+[runner] cell 14 start
+[runner] cell 14 done in 0s
+eICU 72h matrix at 80% coverage: 55 features (the original run reported 55)
+======================================================================
+STEP 22 | eICU 72h-window in-hospital mortality (n=5000 subsample) | roster=original
+======================================================================
+  fold 1/5 done (5s)
+  fold 2/5 done (9s)
+  fold 3/5 done (13s)
+  fold 4/5 done (17s)
+  fold 5/5 done (21s)
+                                                    task                               method   roster  AUROC  AUROC_sd  Brier    ECE
+eICU 72h-window in-hospital mortality (n=5000 subsample)            XGB single (all features) original 0.8432    0.0084 0.1113 0.0242
+eICU 72h-window in-hospital mortality (n=5000 subsample)             LR single (all features) original 0.8270    0.0168 0.1140 0.0293
+eICU 72h-window in-hospital mortality (n=5000 subsample)   Stack, XGB meta (library defaults) original 0.8037    0.0128 0.1278 0.0898
+eICU 72h-window in-hospital mortality (n=5000 subsample)       Stack, XGB meta (fixed config) original 0.8353    0.0133 0.1129 0.0283
+eICU 72h-window in-hospital mortality (n=5000 subsample)                       Stack, LR meta original 0.8367    0.0106 0.1119 0.0237
+eICU 72h-window in-hospital mortality (n=5000 subsample)                      Mean of Level-1 original 0.8274    0.0102 0.1399 0.0989
+eICU 72h-window in-hospital mortality (n=5000 subsample) Best single Level-1 (picked in-fold) original 0.7835    0.0140 0.1393 0.0246
+                                                    task                               method   roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+eICU 72h-window in-hospital mortality (n=5000 subsample)             LR single (all features) original                    -0.0162   -0.0531     0.0208         0.2905         5
+eICU 72h-window in-hospital mortality (n=5000 subsample)   Stack, XGB meta (library defaults) original                    -0.0394   -0.0612    -0.0177         0.0074         5
+eICU 72h-window in-hospital mortality (n=5000 subsample)       Stack, XGB meta (fixed config) original                    -0.0079   -0.0254     0.0096         0.2765         5
+eICU 72h-window in-hospital mortality (n=5000 subsample)                       Stack, LR meta original                    -0.0065   -0.0229     0.0099         0.3328         5
+eICU 72h-window in-hospital mortality (n=5000 subsample)                      Mean of Level-1 original                    -0.0158   -0.0330     0.0014         0.0634         5
+eICU 72h-window in-hospital mortality (n=5000 subsample) Best single Level-1 (picked in-fold) original                    -0.0597   -0.0912    -0.0281         0.0063         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.358                            0.337                             0.81

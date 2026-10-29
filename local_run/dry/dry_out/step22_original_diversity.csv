@@ -1,0 +1,4 @@
+,mean_corr_all,mean_corr_same_algo_diff_subset,mean_corr_diff_algo_same_subset
+MIMIC-IV 24h-window in-hospital mortality,0.04503167540057655,0.004844077965071413,0.4186426703353776
+eICU 72h-window in-hospital mortality (n=300 subsample),0.031200976526405837,-0.0035528689376325257,0.3600743440386434
+MIMIC LOS>7 (landmark 2d),0.019535653580593886,0.0063846324611182255,0.21280436842630057

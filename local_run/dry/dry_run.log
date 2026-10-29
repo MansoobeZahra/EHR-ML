@@ -1,0 +1,246 @@
+eICU 72h matrix at 80% coverage: 7 features (the original run reported 55)
+
+Building LOS landmark tasks ...
+  landmark 2d: 420 -> 330 episodes still in ICU; LOS>7 prevalence 30.0%, LOS>14 prevalence 2.7%
+======================================================================
+STEP 22 | MIMIC-IV 24h-window in-hospital mortality | roster=original
+======================================================================
+  fold 1/5 done (1s)
+  fold 2/5 done (2s)
+  fold 3/5 done (3s)
+  fold 4/5 done (4s)
+  fold 5/5 done (5s)
+                                     task                               method   roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC-IV 24h-window in-hospital mortality            XGB single (all features) original 0.7689    0.0265 0.1529 0.1074
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) original 0.7823    0.0319 0.1523 0.0948
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) original 0.7079    0.0751 0.1954 0.1941
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) original 0.7186    0.0762 0.1740 0.1103
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta original 0.7579    0.0613 0.1702 0.1301
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 original 0.7199    0.0369 0.1839 0.0946
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) original 0.7022    0.0432 0.1787 0.1099
+                                     task                               method   roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) original                     0.0134   -0.0445     0.0714         0.5550         5
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) original                    -0.0610   -0.1936     0.0716         0.2709         5
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) original                    -0.0503   -0.1648     0.0643         0.2901         5
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta original                    -0.0110   -0.1137     0.0917         0.7809         5
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 original                    -0.0489   -0.1146     0.0168         0.1075         5
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) original                    -0.0667   -0.1529     0.0195         0.0981         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.045                            0.005                            0.419
+======================================================================
+STEP 22 | eICU 72h-window in-hospital mortality (n=300 subsample) | roster=original
+======================================================================
+  fold 1/5 done (1s)
+  fold 2/5 done (2s)
+  fold 3/5 done (2s)
+  fold 4/5 done (3s)
+  fold 5/5 done (4s)
+                                                   task                               method   roster  AUROC  AUROC_sd  Brier    ECE
+eICU 72h-window in-hospital mortality (n=300 subsample)            XGB single (all features) original 0.7900    0.0504 0.1556 0.1228
+eICU 72h-window in-hospital mortality (n=300 subsample)             LR single (all features) original 0.8242    0.0741 0.1420 0.1206
+eICU 72h-window in-hospital mortality (n=300 subsample)   Stack, XGB meta (library defaults) original 0.7136    0.0567 0.2171 0.2179
+eICU 72h-window in-hospital mortality (n=300 subsample)       Stack, XGB meta (fixed config) original 0.7348    0.0134 0.1863 0.1530
+eICU 72h-window in-hospital mortality (n=300 subsample)                       Stack, LR meta original 0.7994    0.0696 0.1705 0.1549
+eICU 72h-window in-hospital mortality (n=300 subsample)                      Mean of Level-1 original 0.7058    0.0582 0.1858 0.0972
+eICU 72h-window in-hospital mortality (n=300 subsample) Best single Level-1 (picked in-fold) original 0.7227    0.0699 0.1750 0.0908
+                                                   task                               method   roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+eICU 72h-window in-hospital mortality (n=300 subsample)             LR single (all features) original                     0.0342   -0.0813     0.1496         0.4574         5
+eICU 72h-window in-hospital mortality (n=300 subsample)   Stack, XGB meta (library defaults) original                    -0.0765   -0.2243     0.0713         0.2242         5
+eICU 72h-window in-hospital mortality (n=300 subsample)       Stack, XGB meta (fixed config) original                    -0.0553   -0.1671     0.0565         0.2417         5
+eICU 72h-window in-hospital mortality (n=300 subsample)                       Stack, LR meta original                     0.0094   -0.1043     0.1230         0.8303         5
+eICU 72h-window in-hospital mortality (n=300 subsample)                      Mean of Level-1 original                    -0.0842   -0.1764     0.0080         0.0643         5
+eICU 72h-window in-hospital mortality (n=300 subsample) Best single Level-1 (picked in-fold) original                    -0.0673   -0.2096     0.0749         0.2591         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.031                           -0.004                             0.36
+======================================================================
+STEP 22 | MIMIC LOS>7 (landmark 2d) | roster=original
+======================================================================
+  fold 1/5 done (1s)
+  fold 2/5 done (2s)
+  fold 3/5 done (3s)
+  fold 4/5 done (3s)
+  fold 5/5 done (4s)
+                     task                               method   roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC LOS>7 (landmark 2d)            XGB single (all features) original 0.5991    0.0555 0.2170 0.1449
+MIMIC LOS>7 (landmark 2d)             LR single (all features) original 0.5746    0.0621 0.2095 0.0946
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) original 0.5366    0.1160 0.2641 0.2438
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) original 0.5446    0.0846 0.2371 0.1825
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta original 0.5357    0.0772 0.2312 0.1741
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 original 0.5519    0.0319 0.2100 0.0411
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) original 0.5264    0.0902 0.2154 0.1090
+                     task                               method   roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC LOS>7 (landmark 2d)             LR single (all features) original                    -0.0245   -0.1957     0.1467         0.7112         5
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) original                    -0.0625   -0.2465     0.1216         0.3995         5
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) original                    -0.0545   -0.1787     0.0697         0.2903         5
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta original                    -0.0634   -0.1888     0.0620         0.2331         5
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 original                    -0.0472   -0.1295     0.0352         0.1870         5
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) original                    -0.0727   -0.2358     0.0904         0.2836         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value           0.02                            0.006                            0.213
+======================================================================
+STEP 22 | MIMIC-IV 24h-window in-hospital mortality | roster=diverse
+======================================================================
+  fold 1/5 done (5s)
+  fold 2/5 done (10s)
+  fold 3/5 done (15s)
+  fold 4/5 done (20s)
+  fold 5/5 done (24s)
+                                     task                               method  roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC-IV 24h-window in-hospital mortality            XGB single (all features) diverse 0.7689    0.0265 0.1529 0.1074
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) diverse 0.7823    0.0319 0.1523 0.0948
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) diverse 0.6703    0.0596 0.1969 0.1909
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) diverse 0.7079    0.0510 0.1774 0.1268
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta diverse 0.7269    0.0181 0.1814 0.1302
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 diverse 0.7208    0.0401 0.1829 0.0992
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) diverse 0.7063    0.0340 0.1729 0.0905
+                                     task                               method  roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC-IV 24h-window in-hospital mortality             LR single (all features) diverse                     0.0134   -0.0445     0.0714         0.5550         5
+MIMIC-IV 24h-window in-hospital mortality   Stack, XGB meta (library defaults) diverse                    -0.0986   -0.2207     0.0235         0.0884         5
+MIMIC-IV 24h-window in-hospital mortality       Stack, XGB meta (fixed config) diverse                    -0.0609   -0.1472     0.0254         0.1215         5
+MIMIC-IV 24h-window in-hospital mortality                       Stack, LR meta diverse                    -0.0420   -0.0959     0.0119         0.0964         5
+MIMIC-IV 24h-window in-hospital mortality                      Mean of Level-1 diverse                    -0.0481   -0.1167     0.0205         0.1235         5
+MIMIC-IV 24h-window in-hospital mortality Best single Level-1 (picked in-fold) diverse                    -0.0626   -0.1454     0.0202         0.1036         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.051                            0.001                            0.442
+======================================================================
+STEP 22 | MIMIC LOS>7 (landmark 2d) | roster=diverse
+======================================================================
+  fold 1/5 done (4s)
+  fold 2/5 done (9s)
+  fold 3/5 done (13s)
+  fold 4/5 done (18s)
+  fold 5/5 done (22s)
+                     task                               method  roster  AUROC  AUROC_sd  Brier    ECE
+MIMIC LOS>7 (landmark 2d)            XGB single (all features) diverse 0.5991    0.0555 0.2170 0.1449
+MIMIC LOS>7 (landmark 2d)             LR single (all features) diverse 0.5746    0.0621 0.2095 0.0946
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) diverse 0.5243    0.0650 0.2792 0.2812
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) diverse 0.5366    0.0576 0.2367 0.1804
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta diverse 0.5814    0.0621 0.2345 0.1745
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 diverse 0.5621    0.0648 0.2093 0.0480
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) diverse 0.5064    0.0639 0.2182 0.1167
+                     task                               method  roster  delta_AUROC_vs_XGB_single  CI95_low  CI95_high  p_corrected_t  n_scores
+MIMIC LOS>7 (landmark 2d)             LR single (all features) diverse                    -0.0245   -0.1957     0.1467         0.7112         5
+MIMIC LOS>7 (landmark 2d)   Stack, XGB meta (library defaults) diverse                    -0.0748   -0.1658     0.0163         0.0848         5
+MIMIC LOS>7 (landmark 2d)       Stack, XGB meta (fixed config) diverse                    -0.0625   -0.1216    -0.0033         0.0428         5
+MIMIC LOS>7 (landmark 2d)                       Stack, LR meta diverse                    -0.0177   -0.0693     0.0338         0.3934         5
+MIMIC LOS>7 (landmark 2d)                      Mean of Level-1 diverse                    -0.0370   -0.1088     0.0348         0.2257         5
+MIMIC LOS>7 (landmark 2d) Best single Level-1 (picked in-fold) diverse                    -0.0927   -0.2794     0.0940         0.2402         5
+       mean_corr_all  mean_corr_same_algo_diff_subset  mean_corr_diff_algo_same_subset
+value          0.032                            0.006                            0.296
+
+======================================================================
+STEP 23: cohort-size sensitivity (n = 729, original study size)
+--- size sensitivity draw 1/5 (n=420) ---
+--- size sensitivity draw 2/5 (n=420) ---
+--- size sensitivity draw 3/5 (n=420) ---
+--- size sensitivity draw 4/5 (n=420) ---
+--- size sensitivity draw 5/5 (n=420) ---
+                              method  AUROC_mean  AUROC_sd  delta_mean  delta_sd  draws_below_single  ECE_mean
+Best single Level-1 (picked in-fold)      0.7022       0.0     -0.0667       0.0                   5    0.1099
+            LR single (all features)      0.7823       0.0      0.0134       0.0                   0    0.0948
+                     Mean of Level-1      0.7199       0.0     -0.0489       0.0                   5    0.0946
+                      Stack, LR meta      0.7579       0.0     -0.0110       0.0                   5    0.1301
+      Stack, XGB meta (fixed config)      0.7186       0.0     -0.0503       0.0                   5    0.1103
+  Stack, XGB meta (library defaults)      0.7079       0.0     -0.0610       0.0                   5    0.1941
+           XGB single (all features)      0.7689       0.0      0.0000       0.0                   0    0.1074
+
+======================================================================
+STEP 24: feature-coverage distribution and sweep
+
+Coverage distribution, eICU 72h (n features = 20)
+[0.0, 0.5)    0
+[0.5, 0.6)    4
+[0.6, 0.7)    5
+[0.7, 0.8)    4
+[0.8, 0.9)    6
+[0.9, 1.0)    1
+
+Coverage distribution, MIMIC-IV 24h (n features = 20)
+[0.0, 0.5)    0
+[0.5, 0.6)    2
+[0.6, 0.7)    5
+[0.7, 0.8)    6
+[0.8, 0.9)    5
+[0.9, 1.0)    2
+     dataset  threshold  n_features  AUROC  delta_vs_ref  CI95_low  CI95_high  p_corrected_t
+MIMIC-IV 24h        0.5          20 0.8563        0.0857    0.0056     0.1657         0.0411
+MIMIC-IV 24h        0.6          18 0.8321        0.0615   -0.0002     0.1232         0.0505
+MIMIC-IV 24h        0.7          13 0.8289        0.0583    0.0004     0.1162         0.0491
+MIMIC-IV 24h        0.8           7 0.7706        0.0000    0.0000     0.0000            NaN
+MIMIC-IV 24h        0.9           2 0.7399       -0.0308   -0.0797     0.0182         0.1559
+ dataset  threshold  n_features  AUROC  delta_vs_ref  CI95_low  CI95_high  p_corrected_t
+eICU 72h        0.5          20 0.8563        0.0348   -0.0359     0.1055         0.2438
+eICU 72h        0.6          16 0.8534        0.0319   -0.0087     0.0725         0.0945
+eICU 72h        0.7          11 0.8366        0.0151   -0.0122     0.0423         0.2000
+eICU 72h        0.8           7 0.8215        0.0000    0.0000     0.0000            NaN
+eICU 72h        0.9           1 0.5901       -0.2314   -0.3612    -0.1015         0.0078
+
+======================================================================
+STEP 25: SHAP fold stability and nested feature selection
+
+--- MIMIC-IV 24h mortality ---
+  fold 1/5 done
+  fold 2/5 done
+  fold 3/5 done
+  fold 4/5 done
+  fold 5/5 done
+
+Top-20 SHAP set stability across 5 training folds: mean Jaccard = 1.000 (min 1.000)
+Selection frequency (share of folds with the feature in the top set):
+vitals_v0_avg      1.0
+vitals_v0_min      1.0
+vitals_v1_max      1.0
+vitals_v1_first    1.0
+vitals_v1_last     1.0
+labs_v0_last       1.0
+labs_v1_avg        1.0
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.7734              0.7689        0.0045   -0.0146     0.0236         0.5488
+    20 0.7734              0.7689        0.0045   -0.0146     0.0236         0.5488
+    30 0.7734              0.7689        0.0045   -0.0146     0.0236         0.5488
+    40 0.7734              0.7689        0.0045   -0.0146     0.0236         0.5488
+
+--- eICU 72h mortality ---
+  fold 1/5 done
+  fold 2/5 done
+  fold 3/5 done
+  fold 4/5 done
+  fold 5/5 done
+
+Top-20 SHAP set stability across 5 training folds: mean Jaccard = 1.000 (min 1.000)
+Selection frequency (share of folds with the feature in the top set):
+vitals_v0_avg     1.0
+vitals_v0_min     1.0
+vitals_v1_last    1.0
+labs_v0_avg       1.0
+labs_v0_min       1.0
+labs_v1_first     1.0
+labs_v1_last      1.0
+
+Nested (leak-free) top-K selection vs all features:
+ top_k  AUROC  AUROC_all_features  delta_vs_all  CI95_low  CI95_high  p_corrected_t
+    10 0.7998                0.79        0.0097   -0.0143     0.0337         0.3238
+    20 0.7998                0.79        0.0097   -0.0143     0.0337         0.3238
+    30 0.7998                0.79        0.0097   -0.0143     0.0337         0.3238
+    40 0.7998                0.79        0.0097   -0.0143     0.0337         0.3238
+
+Files to send back for the paper revision:
+   coverage_hist_MIMIC-IV_24h.png
+   coverage_hist_eICU_72h.png
+   step22_diverse_deltas.csv
+   step22_diverse_diversity.csv
+   step22_diverse_summary.csv
+   step22_original_deltas.csv
+   step22_original_diversity.csv
+   step22_original_summary.csv
+   step23_size_sensitivity_draws.csv
+   step23_size_sensitivity_summary.csv
+   step24_coverage_sweep.csv
+   step25_nested_selection_MIMIC-IV.csv
+   step25_nested_selection_eICU.csv
+   step25_shap_frequency_MIMIC-IV.csv
+   step25_shap_frequency_eICU.csv
+DRIVER DRY RUN OK
+88.67 s

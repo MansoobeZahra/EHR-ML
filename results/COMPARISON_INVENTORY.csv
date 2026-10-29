@@ -1,0 +1,67 @@
+setting,meta_learner,group,reference,n_folds,delta_points,ci_low,ci_high,verdict,p_value,p_holm,verdict_holm
+main:mimic24,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.26,-5.38,-1.14,worse,0.00531,0.29205,not significant
+main:mimic24,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.51,-1.84,0.82,not significant,0.42332,1.0,not significant
+main:mimic24,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.16,-1.22,0.9,not significant,0.75757,1.0,not significant
+main:eicu72,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.71,-3.51,-1.91,worse,0.0,0.00026,worse
+main:eicu72,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.32,-0.82,0.17,not significant,0.1834,1.0,not significant
+main:eicu72,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.27,-0.67,0.13,not significant,0.16947,1.0,not significant
+main:los7_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.87,-7.27,-0.46,worse,0.02876,1.0,not significant
+main:los7_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-1.58,-4.3,1.15,not significant,0.23468,1.0,not significant
+main:los7_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.53,-2.76,1.69,not significant,0.6144,1.0,not significant
+main:los14_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.25,-7.36,0.86,not significant,0.11232,1.0,not significant
+main:los14_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.21,-3.58,3.17,not significant,0.89704,1.0,not significant
+main:los14_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,0.44,-3.08,3.97,not significant,0.7903,1.0,not significant
+main:los7_d1,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-5.85,-8.52,-3.17,worse,0.00035,0.02078,worse
+main:los7_d1,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-2.59,-4.6,-0.57,worse,0.01549,0.79395,not significant
+main:los7_d1,"Stack, LR meta",regularized,XGB single (fixed config),15,-3.22,-5.21,-1.24,worse,0.00366,0.20482,not significant
+main:los14_d1,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-5.21,-8.73,-1.69,worse,0.00678,0.35942,not significant
+main:los14_d1,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-1.19,-3.64,1.27,not significant,0.31662,1.0,not significant
+main:los14_d1,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.58,-2.4,1.25,not significant,0.50841,1.0,not significant
+tuned:mimic24,"Stack, XGB meta (library defaults)",default,XGB single (tuned),15,-2.96,-4.71,-1.2,worse,0.00279,0.15913,not significant
+tuned:mimic24,"Stack, XGB meta (tuned)",regularized,XGB single (tuned),15,-0.02,-1.26,1.22,not significant,0.97498,1.0,not significant
+tuned:mimic24,"Stack, LR meta (tuned C)",regularized,XGB single (tuned),15,0.45,-0.38,1.28,not significant,0.26359,1.0,not significant
+tuned:eicu72,"Stack, XGB meta (library defaults)",default,XGB single (tuned),15,-2.95,-3.71,-2.18,worse,0.0,6e-05,worse
+tuned:eicu72,"Stack, XGB meta (tuned)",regularized,XGB single (tuned),15,-0.87,-1.38,-0.36,worse,0.00258,0.14947,not significant
+tuned:eicu72,"Stack, LR meta (tuned C)",regularized,XGB single (tuned),15,-0.73,-1.11,-0.34,worse,0.00123,0.07262,not significant
+tuned:los7_d2,"Stack, XGB meta (library defaults)",default,XGB single (tuned),15,-3.47,-6.17,-0.78,worse,0.01527,0.79395,not significant
+tuned:los7_d2,"Stack, XGB meta (tuned)",regularized,XGB single (tuned),15,-0.81,-2.92,1.3,not significant,0.42307,1.0,not significant
+tuned:los7_d2,"Stack, LR meta (tuned C)",regularized,XGB single (tuned),15,-0.2,-2.38,1.99,not significant,0.85104,1.0,not significant
+tuned:los14_d2,"Stack, XGB meta (library defaults)",default,XGB single (tuned),15,-6.54,-11.97,-1.12,worse,0.02155,1.0,not significant
+tuned:los14_d2,"Stack, XGB meta (tuned)",regularized,XGB single (tuned),15,-1.38,-4.17,1.41,not significant,0.30673,1.0,not significant
+tuned:los14_d2,"Stack, LR meta (tuned C)",regularized,XGB single (tuned),15,0.28,-1.6,2.16,not significant,0.75259,1.0,not significant
+div:mimic24,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.78,-5.17,-0.38,worse,0.02607,1.0,not significant
+div:mimic24,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.22,-1.46,1.02,not significant,0.709,1.0,not significant
+div:mimic24,"Stack, LR meta",regularized,XGB single (fixed config),15,-1.15,-3.33,1.04,not significant,0.2792,1.0,not significant
+div:eicu72,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.0,-2.82,-1.19,worse,0.00012,0.00722,worse
+div:eicu72,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.01,-0.57,0.56,not significant,0.97666,1.0,not significant
+div:eicu72,"Stack, LR meta",regularized,XGB single (fixed config),15,0.18,-0.34,0.71,not significant,0.47194,1.0,not significant
+div:los7_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.97,-6.64,0.7,not significant,0.10409,1.0,not significant
+div:los7_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-1.27,-4.05,1.5,not significant,0.34154,1.0,not significant
+div:los7_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,-2.63,-5.12,-0.14,worse,0.03982,1.0,not significant
+div:los14_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.23,-7.83,1.38,not significant,0.15497,1.0,not significant
+div:los14_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.64,-3.97,2.7,not significant,0.68784,1.0,not significant
+div:los14_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,-1.65,-5.82,2.53,not significant,0.41198,1.0,not significant
+cat5:mimic24,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.69,-4.48,-0.89,worse,0.00627,0.33869,not significant
+cat5:mimic24,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.24,-1.44,0.96,not significant,0.67148,1.0,not significant
+cat5:mimic24,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.26,-1.22,0.7,not significant,0.5679,1.0,not significant
+cat5:eicu72,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.45,-2.82,-2.08,worse,0.0,0.0,worse
+cat5:eicu72,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.29,-0.74,0.16,not significant,0.18637,1.0,not significant
+cat5:eicu72,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.31,-0.81,0.19,not significant,0.20006,1.0,not significant
+cat5:los7_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.31,-6.58,-0.03,worse,0.04806,1.0,not significant
+cat5:los7_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-1.53,-4.03,0.97,not significant,0.21018,1.0,not significant
+cat5:los7_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.62,-2.83,1.58,not significant,0.55298,1.0,not significant
+cat5:los14_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.05,-6.39,0.29,not significant,0.0704,1.0,not significant
+cat5:los14_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,0.01,-2.93,2.94,not significant,0.99568,1.0,not significant
+cat5:los14_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,0.58,-3.08,4.24,not significant,0.73909,1.0,not significant
+catmlp:mimic24,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.26,-4.63,-1.89,worse,0.00016,0.0097,worse
+catmlp:mimic24,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.28,-1.12,0.57,not significant,0.49036,1.0,not significant
+catmlp:mimic24,"Stack, LR meta",regularized,XGB single (fixed config),15,0.17,-0.58,0.93,not significant,0.62685,1.0,not significant
+catmlp:eicu72,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.33,-3.07,-1.59,worse,1e-05,0.00058,worse
+catmlp:eicu72,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.35,-0.81,0.12,not significant,0.13117,1.0,not significant
+catmlp:eicu72,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.28,-0.75,0.19,not significant,0.21736,1.0,not significant
+catmlp:los7_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-3.34,-6.13,-0.54,worse,0.02267,1.0,not significant
+catmlp:los7_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-1.61,-3.62,0.4,not significant,0.10822,1.0,not significant
+catmlp:los7_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,-0.44,-2.56,1.68,not significant,0.66422,1.0,not significant
+catmlp:los14_d2,"Stack, XGB meta (library defaults)",default,XGB single (fixed config),15,-2.85,-5.98,0.27,not significant,0.07063,1.0,not significant
+catmlp:los14_d2,"Stack, XGB meta (fixed config)",regularized,XGB single (fixed config),15,-0.03,-2.89,2.83,not significant,0.98138,1.0,not significant
+catmlp:los14_d2,"Stack, LR meta",regularized,XGB single (fixed config),15,0.62,-2.63,3.87,not significant,0.68721,1.0,not significant

@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72 h mortality,cat5,LR single (all features),XGB single (fixed config),auc,-0.021453983684235827,-0.029894706508117902,-0.013013260860353754,8.533836562718555e-05,15
+eICU 72 h mortality,cat5,LR single (all features),XGB single (fixed config),auprc,-0.023566893790046877,-0.03553347080140369,-0.011600316778690063,0.0008500868625918034,15
+eICU 72 h mortality,cat5,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.024526450436383292,-0.028237690327280247,-0.020815210545486337,1.0739744649157501e-09,15
+eICU 72 h mortality,cat5,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.03030885089586138,-0.04056572412263482,-0.020051977669087936,1.835370141023418e-05,15
+eICU 72 h mortality,cat5,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.0029096538910931965,-0.007400768409302096,0.001581460627115703,0.18637208712499298,15
+eICU 72 h mortality,cat5,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.0010135721697227837,-0.01024151674439182,0.008214372404946253,0.8171717401007543,15
+eICU 72 h mortality,cat5,"Stack, LR meta",XGB single (fixed config),auc,-0.0031139403090854056,-0.00808007941959376,0.001852198801422949,0.20005520877759708,15
+eICU 72 h mortality,cat5,"Stack, LR meta",XGB single (fixed config),auprc,-0.0038499355323708814,-0.013448002968046536,0.005748131903304772,0.4041120564192877,15
+eICU 72 h mortality,cat5,Mean of Level-1,XGB single (fixed config),auc,-0.019231422735814012,-0.025023884620950697,-0.013438960850677329,5.165274548302179e-06,15
+eICU 72 h mortality,cat5,Mean of Level-1,XGB single (fixed config),auprc,-0.0376935558866691,-0.05040784995024392,-0.024979261823094283,1.772783655873411e-05,15
+eICU 72 h mortality,cat5,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.05960943494162881,-0.06856366994936734,-0.05065519993389028,9.756546681671807e-10,15
+eICU 72 h mortality,cat5,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.1529909168828033,-0.1733981941526572,-0.13258363961294942,2.0229862229825812e-10,15

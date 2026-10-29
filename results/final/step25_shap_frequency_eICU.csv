@@ -1,0 +1,31 @@
+,0
+vitals_Heart Rate_avg,1.0
+vitals_SpO2_avg,1.0
+vitals_Heart Rate_max,1.0
+vitals_SpO2_min,1.0
+vitals_Heart Rate_last,1.0
+vitals_SpO2_last,1.0
+vitals_Respiratory Rate_last,1.0
+labs_Hemoglobin_avg,1.0
+labs_Glucose_last,1.0
+labs_Potassium_last,1.0
+labs_WBC_last,1.0
+labs_Creatinine_last,1.0
+labs_Platelets_min,1.0
+labs_Glucose_min,1.0
+labs_BUN_last,1.0
+labs_Platelets_last,1.0
+labs_Hemoglobin_min,1.0
+vitals_Heart Rate_min,0.8
+vitals_Respiratory Rate_min,0.4
+labs_Creatinine_first,0.4
+labs_Sodium_max,0.3
+labs_Hemoglobin_last,0.2
+vitals_Respiratory Rate_avg,0.2
+vitals_Heart Rate_first,0.1
+labs_BUN_avg,0.1
+labs_Glucose_avg,0.1
+labs_Platelets_avg,0.1
+labs_Glucose_max,0.1
+labs_Platelets_max,0.1
+labs_WBC_first,0.1

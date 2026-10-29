@@ -1,0 +1,13 @@
+task,roster,method,reference,metric,delta,CI95_low,CI95_high,p_corrected_t,n_scores
+eICU 72 h mortality (missing discharge status excluded),original,LR single (all features),XGB single (fixed config),auc,-0.020799697607461757,-0.029077341138943967,-0.012522054075979549,9.54305132598865e-05,15
+eICU 72 h mortality (missing discharge status excluded),original,LR single (all features),XGB single (fixed config),auprc,-0.022548776344844788,-0.03515336026558726,-0.009944192424102315,0.0018138610869116167,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auc,-0.027779561320330253,-0.037933948775749314,-0.017625173864911192,4.0922199837645223e-05,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, XGB meta (library defaults)",XGB single (fixed config),auprc,-0.033127362199248674,-0.04762130732482824,-0.018633417073669105,0.00023336890180725156,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auc,-0.002501458278309528,-0.007322025516808324,0.002319108960189268,0.2844712444415931,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, XGB meta (fixed config)",XGB single (fixed config),auprc,-0.0012502616256897378,-0.012341069143075357,0.009840545891695883,0.8124555902378097,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, LR meta",XGB single (fixed config),auc,-0.0019752891052546924,-0.007407099420392974,0.00345652120988359,0.44840274333308283,15
+eICU 72 h mortality (missing discharge status excluded),original,"Stack, LR meta",XGB single (fixed config),auprc,-0.002555259167976794,-0.012171316108114423,0.007060797772160834,0.5777566095491029,15
+eICU 72 h mortality (missing discharge status excluded),original,Mean of Level-1,XGB single (fixed config),auc,-0.01910896328382105,-0.025163444922311352,-0.013054481645330747,9.033132913671693e-06,15
+eICU 72 h mortality (missing discharge status excluded),original,Mean of Level-1,XGB single (fixed config),auprc,-0.03740504246849352,-0.05020916971969335,-0.02460091521729369,2.0716080717964047e-05,15
+eICU 72 h mortality (missing discharge status excluded),original,Best single Level-1 (picked in-fold),XGB single (fixed config),auc,-0.05919103236636125,-0.06797291334312391,-0.050409151389598596,8.287799335704449e-10,15
+eICU 72 h mortality (missing discharge status excluded),original,Best single Level-1 (picked in-fold),XGB single (fixed config),auprc,-0.15289021757940643,-0.17564669667857472,-0.13013373848023815,8.645677507246319e-10,15

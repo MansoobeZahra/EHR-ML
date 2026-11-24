@@ -107,3 +107,4 @@ SHAP 0.49.1, keep the versions in `requirements.txt`.
 ## Contact
 
 Ijaz Hussain, ijazhussain@pieas.edu.pk
+Mansoob-e-Zahra, mansoobezehra@gmail.com
